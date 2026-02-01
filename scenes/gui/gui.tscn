@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://brx5vgtsxqppc"]
+
+[ext_resource type="Script" uid="uid://qh5ipht3cg47" path="res://scripts/gui/gui.gd" id="1_q21vd"]
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q21vd")
