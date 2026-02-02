@@ -2,6 +2,11 @@
 class_name Fish
 extends RigidBody2D
 
+# Fish params
+@export var species: int # Different species have a different index type
+@export var weight: int
+@export var oddities: Array = []
+
 # Object params
 @export var hovering: bool
 
