@@ -3,7 +3,7 @@ class_name Fish
 extends RigidBody2D
 
 # Fish params
-@export var species: int # Different species have a different index type
+@export var species: String # Different species have a different index type
 @export var weight: int
 @export var oddities: Array = []
 
@@ -14,8 +14,10 @@ extends RigidBody2D
 @onready var fish_sprite: Sprite2D = $FishSprite
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
-func _init() -> void:
-	pass
+func setup(_species: String, _weight: int, _oddities: Array) -> void:
+	species = _species
+	weight = _weight
+	oddities.append_array(_oddities)
 
 func _ready() -> void:
 	# Set global position

@@ -9,6 +9,6 @@ func _init():
 	pass
 
 func _ready() -> void:
-	var new_fish = fish_scene.instantiate()
+	var new_fish = FishGenerator.generate_fish(FishGenerator.PLAICE)
 	fish.append(new_fish)
 	add_child(new_fish)
