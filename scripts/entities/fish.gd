@@ -30,10 +30,11 @@ func _ready() -> void:
 func _process(_delta) -> void:
 	pass
 
+# Built in godot method, happens every tick
 func _physics_process(_delta: float) -> void:
+	# Checks if the mouse is over the fish, and the left mouse button is pressed (Dragging)
 	if hovering and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		linear_velocity = (get_global_mouse_position() - global_position) * 50
-
 
 func _on_mouse_entered() -> void:
 	hovering = true
