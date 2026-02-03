@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://her3eaouui8f"]
+
+[ext_resource type="Script" uid="uid://doibnqfeg5kpc" path="res://scenes/menus/fullscreen_checkbox.gd" id="1_7i3iu"]
+[ext_resource type="Script" uid="uid://dhc401bk26qjw" path="res://scenes/menus/volume_slider.gd" id="1_hayap"]
+
+[sub_resource type="GDScript" id="GDScript_s2d1y"]
+script/source = "extends HBoxContainer
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed(\"Fullscreen\"):
+		var mode := DisplayServer.window_get_mode()
+		var is_window: bool = mode != DisplayServer.WINDOW_MODE_FULLSCREEN
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if is_window else DisplayServer.WINDOW_MODE_WINDOWED)"
+
+[node name="SettingMenu" type="Control" unique_id=324155110]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="UISettingCheckbox" type="HBoxContainer" parent="." unique_id=1170245184]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_s2d1y")
+
+[node name="fullscreen_checkbox" type="CheckBox" parent="UISettingCheckbox" unique_id=287543817]
+layout_mode = 2
+script = ExtResource("1_7i3iu")
+
+[node name="volume_slider" type="HSlider" parent="UISettingCheckbox" unique_id=1499619204]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+script = ExtResource("1_hayap")
+
+[connection signal="toggled" from="UISettingCheckbox/fullscreen_checkbox" to="UISettingCheckbox/fullscreen_checkbox" method="_on_toggled"]
+[connection signal="mouse_exited" from="UISettingCheckbox/volume_slider" to="UISettingCheckbox/volume_slider" method="release_focus"]
+[connection signal="value_changed" from="UISettingCheckbox/volume_slider" to="UISettingCheckbox/volume_slider" method="_on_value_changed"]
