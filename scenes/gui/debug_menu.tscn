@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://blfkit4v8y4xv"]
+
+[ext_resource type="Script" uid="uid://bmq84ts2o3c7i" path="res://scripts/gui/debug_menu.gd" id="1_acute"]
+
+[node name="DebugMenu" type="Control" unique_id=19588924]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_acute")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1960230732]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1821472789]
+layout_mode = 2
+
+[node name="MouseCoordsLabel" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=236536272]
+layout_mode = 2
+text = "Mouse Coords:"
+
+[node name="MouseCoordsValueLabel" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=491465414]
+layout_mode = 2
+text = "(0,0)"

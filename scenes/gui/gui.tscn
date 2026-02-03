@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://brx5vgtsxqppc"]
+[gd_scene format=3 uid="uid://brx5vgtsxqppc"]
 
 [ext_resource type="Script" uid="uid://qh5ipht3cg47" path="res://scripts/gui/gui.gd" id="1_q21vd"]
+[ext_resource type="PackedScene" uid="uid://blfkit4v8y4xv" path="res://scenes/gui/debug_menu.tscn" id="2_x2qsw"]
 
-[node name="GUI" type="Control"]
+[node name="GUI" type="Control" unique_id=217434855]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,3 +11,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_q21vd")
+
+[node name="DebugMenu" parent="." unique_id=1113625078 instance=ExtResource("2_x2qsw")]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 19.0
+offset_right = 22.0
+offset_bottom = 19.0
