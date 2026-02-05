@@ -4,7 +4,7 @@ extends Node
 static var fish_scene = preload("res://scenes/entities/fish.tscn")
 
 # Name, normal weight
-const PLAICE = ["Plaice", 400, "res://resources/images/generic_fish_placeholder.png"]
+const PLAICE = ["Plaice", 400, "res://resources/images/fish/fish_plaice_normal.png"]
 
 # example call:
 # var fish = FishGenerator.generate_fish(FishGenerator.PLAICE)
