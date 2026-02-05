@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://56xon3jcf3sm"]
 
 [ext_resource type="Script" uid="uid://ba868rl11ryfj" path="res://scripts/entities/fish.gd" id="1_gk455"]
+[ext_resource type="Texture2D" uid="uid://cnwr7e6dplbeq" path="res://resources/images/generic_fish_placeholder.png" id="2_gk455"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_w8q0n"]
 bounce = 0.5
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w8q0n"]
 radius = 25.75
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_afurl"]
+radius = 36.05551
 
 [node name="Fish" type="RigidBody2D" unique_id=1773258173]
 input_pickable = true
@@ -18,6 +22,12 @@ script = ExtResource("1_gk455")
 shape = SubResource("CircleShape2D_w8q0n")
 
 [node name="FishSprite" type="Sprite2D" parent="." unique_id=1437493492]
+texture = ExtResource("2_gk455")
+
+[node name="BinDetectionArea2D" type="Area2D" parent="." unique_id=1964520871]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BinDetectionArea2D" unique_id=1245737333]
+shape = SubResource("CircleShape2D_afurl")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
