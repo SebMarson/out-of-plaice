@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://ce8oedk5c686f"]
+
+[ext_resource type="Script" uid="uid://bpkfb6586cce6" path="res://scripts/menus/end_day_scene.gd" id="1_p3mll"]
+
+[node name="EndDayScene" type="Control" unique_id=1086290434]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p3mll")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=214743825]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="TitleLabel" type="Label" parent="MarginContainer" unique_id=849093064]
+layout_mode = 2
+size_flags_vertical = 0
+text = "End Day"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1143854768]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2031709922]
+layout_mode = 2
+
+[node name="FishSoldLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1726420345]
+layout_mode = 2
+text = "Fish Sold: "
+
+[node name="FishSoldValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=937072730]
+layout_mode = 2
+text = "0"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=138571873]
+layout_mode = 2
+
+[node name="FishDestroyedLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=491592072]
+layout_mode = 2
+text = "Fish Destroyed: "
+
+[node name="FishDestroyedValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=946057276]
+layout_mode = 2
+text = "0"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=96510584]
+layout_mode = 2
+
+[node name="PlayerMoneyLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=909416623]
+layout_mode = 2
+text = "Player Money: "
+
+[node name="PlayerMoneyValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1805631794]
+layout_mode = 2
+text = "0"
+
+[node name="NextDayButton" type="Button" parent="MarginContainer" unique_id=275091603]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Next Day"
+
+[connection signal="pressed" from="MarginContainer/NextDayButton" to="." method="_on_next_day_button_pressed"]

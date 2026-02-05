@@ -2,16 +2,18 @@
 
 [ext_resource type="Script" uid="uid://bmq84ts2o3c7i" path="res://scripts/gui/debug_menu.gd" id="1_acute"]
 
-[node name="DebugMenu" type="Control" unique_id=19588924]
+[node name="DebugMenu" type="MarginContainer" unique_id=1290828919]
 visible = false
-layout_mode = 3
-anchors_preset = 0
+offset_right = 152.0
+offset_bottom = 85.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 script = ExtResource("1_acute")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1960230732]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1821472789]
 layout_mode = 2
@@ -23,3 +25,22 @@ text = "Mouse Coords:"
 [node name="MouseCoordsValueLabel" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=491465414]
 layout_mode = 2
 text = "(0,0)"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1256446711]
+layout_mode = 2
+
+[node name="SpawnFishButton" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=528866092]
+layout_mode = 2
+text = "Spawn Fish"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=20620650]
+layout_mode = 2
+
+[node name="DayTimeLabel" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=939334634]
+layout_mode = 2
+text = "Day time left:"
+
+[node name="DayTimeValueLabel" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=318735568]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/SpawnFishButton" to="." method="_on_spawn_fish_button_pressed"]

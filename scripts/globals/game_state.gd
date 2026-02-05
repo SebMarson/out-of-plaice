@@ -1,3 +1,39 @@
-extends Resource
+extends Node
 
 # Information about the day
+var current_day: int = 0
+var day_timer: Timer
+var fish_sold_today: int = 0
+var fish_destroyed_today: int = 0
+
+# User stats
+var player_money: int = 0
+
+func _init() -> void:
+	# Setup timer
+	day_timer = Timer.new()
+	day_timer.autostart = false
+	day_timer.one_shot = true
+	day_timer.connect("timeout", _on_timeout)
+	SignalBus.day_timer_start.connect(start_timer)
+	add_child(day_timer)
+	
+	# Connect signals
+	SignalBus.sell_fish.connect(_on_fish_sale)
+	SignalBus.destroy_fish.connect(_on_fish_destroy)
+	
+func start_timer(_wait_time: float):
+	day_timer.start(_wait_time)
+	fish_sold_today = 0
+	fish_destroyed_today = 0
+	current_day = current_day + 1
+
+func _on_timeout() -> void:
+	SignalBus.day_timer_expired.emit()
+
+func _on_fish_sale(fish) -> void:
+	player_money = player_money + 1
+	fish_sold_today = fish_sold_today + 1
+
+func _on_fish_destroy(fish) -> void:
+	fish_destroyed_today = fish_destroyed_today + 1
