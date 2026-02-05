@@ -23,6 +23,7 @@ config/icon="res://icon.svg"
 
 SignalBus="*res://scripts/globals/signal_bus.gd"
 GameState="*uid://dvs3827maljis"
+TextRepo="*uid://y46rntqpoxmt"
 
 [input]
 
