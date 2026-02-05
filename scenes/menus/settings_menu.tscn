@@ -11,6 +11,7 @@ anchors_preset = 0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+alignment = 1
 
 [node name="fullscreen_checkbox" type="CheckBox" parent="UISettingCheckbox" unique_id=287543817]
 layout_mode = 2
@@ -19,11 +20,11 @@ alignment = 1
 script = ExtResource("1_7i3iu")
 
 [node name="volume_slider" type="HSlider" parent="UISettingCheckbox" unique_id=1499619204]
-modulate = Color(1, 0.41960785, 1, 1)
-self_modulate = Color(1, 0.47058824, 0.5529412, 1)
+modulate = Color(0.4413868, 0.72752726, 0.9504078, 1)
+self_modulate = Color(0.6625967, 0.05328644, 0.65462, 1)
+show_behind_parent = true
 layout_mode = 2
 tooltip_text = "Volume slider"
-max_value = 1.0
 step = 0.05
 script = ExtResource("1_hayap")
 
