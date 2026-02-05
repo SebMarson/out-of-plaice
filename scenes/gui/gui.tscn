@@ -2,6 +2,11 @@
 
 [ext_resource type="Script" uid="uid://qh5ipht3cg47" path="res://scripts/gui/gui.gd" id="1_q21vd"]
 [ext_resource type="PackedScene" uid="uid://blfkit4v8y4xv" path="res://scenes/gui/debug_menu.tscn" id="2_x2qsw"]
+[ext_resource type="Texture2D" uid="uid://c5djbmmvsycrk" path="res://resources/images/gui/reference-book-button.png" id="3_0jpgx"]
+[ext_resource type="Texture2D" uid="uid://c5v40lhrhhb86" path="res://resources/images/gui/tool_1.png" id="4_g05bf"]
+[ext_resource type="Texture2D" uid="uid://b8cghnqbm6dqm" path="res://resources/images/gui/time-corruption.png" id="4_lrwm8"]
+[ext_resource type="Texture2D" uid="uid://bwf1fclbkmc1x" path="res://resources/images/gui/tool_2.png" id="5_ort37"]
+[ext_resource type="Texture2D" uid="uid://c8juyby2sww8c" path="res://resources/images/gui/tool_3.png" id="6_gv5p5"]
 
 [node name="GUI" type="Control" unique_id=217434855]
 layout_mode = 3
@@ -10,11 +15,81 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
 script = ExtResource("1_q21vd")
 
-[node name="DebugMenu" parent="." unique_id=1113625078 instance=ExtResource("2_x2qsw")]
-layout_mode = 0
-offset_left = 22.0
-offset_top = 19.0
-offset_right = 22.0
-offset_bottom = 19.0
+[node name="ElementsContainer" type="VBoxContainer" parent="." unique_id=1068590774]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopContainer" type="HBoxContainer" parent="ElementsContainer" unique_id=1190125734]
+layout_mode = 2
+
+[node name="DebugMenu" parent="ElementsContainer/TopContainer" unique_id=1113625078 instance=ExtResource("2_x2qsw")]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="TopRightContainer" type="MarginContainer" parent="ElementsContainer/TopContainer" unique_id=1696430943]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ElementsContainer/TopContainer/TopRightContainer" unique_id=981450799]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SoldLabel" type="Label" parent="ElementsContainer/TopContainer/TopRightContainer/HBoxContainer" unique_id=904898601]
+layout_mode = 2
+text = "Sold: "
+
+[node name="SoldValueLabel" type="Label" parent="ElementsContainer/TopContainer/TopRightContainer/HBoxContainer" unique_id=606398749]
+layout_mode = 2
+text = "0"
+
+[node name="DestroyedLabel" type="Label" parent="ElementsContainer/TopContainer/TopRightContainer/HBoxContainer" unique_id=1456310443]
+layout_mode = 2
+text = "Destroyed: "
+
+[node name="DestroyedValueLabel" type="Label" parent="ElementsContainer/TopContainer/TopRightContainer/HBoxContainer" unique_id=720516541]
+layout_mode = 2
+text = "0"
+
+[node name="BottomContainer" type="MarginContainer" parent="ElementsContainer" unique_id=1399674431]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ElementsContainer/BottomContainer" unique_id=2043953790]
+layout_mode = 2
+
+[node name="ReferenceBookButton" type="TextureButton" parent="ElementsContainer/BottomContainer/HBoxContainer" unique_id=56149513]
+layout_mode = 2
+texture_normal = ExtResource("3_0jpgx")
+
+[node name="ToolsContainer" type="HBoxContainer" parent="ElementsContainer/BottomContainer/HBoxContainer" unique_id=1180165801]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="TextureRect" type="TextureRect" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1410965175]
+layout_mode = 2
+texture = ExtResource("4_g05bf")
+
+[node name="TextureRect2" type="TextureRect" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=517447007]
+layout_mode = 2
+texture = ExtResource("5_ort37")
+
+[node name="TextureRect3" type="TextureRect" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1664456899]
+layout_mode = 2
+texture = ExtResource("6_gv5p5")
+
+[node name="TextureRect" type="TextureRect" parent="ElementsContainer/BottomContainer/HBoxContainer" unique_id=204690578]
+layout_mode = 2
+texture = ExtResource("4_lrwm8")

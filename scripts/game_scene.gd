@@ -7,6 +7,10 @@ var bin_scene = preload("res://scenes/entities/bin.tscn")
 var fish = []
 var bins = []
 
+# Children
+@onready var bottom_shape = $AreaBoundaries/BottomShape
+@onready var gui = $GUI
+
 func _init():
 	SignalBus.day_timer_expired.connect(_on_day_timeout)
 
@@ -42,3 +46,5 @@ func spawn_fish() -> void:
 	
 func _on_day_timeout():
 	get_tree().change_scene_to_file("res://scenes/menus/end_day_scene.tscn")
+
+	

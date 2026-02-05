@@ -27,18 +27,18 @@ grow_vertical = 1
 
 [node name="AreaBoundaries" type="StaticBody2D" parent="." unique_id=1850232620]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaBoundaries" unique_id=1682673169]
-position = Vector2(579.5, 692)
+[node name="BottomShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=1682673169]
+position = Vector2(580, 597)
 shape = SubResource("RectangleShape2D_w5aja")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="AreaBoundaries" unique_id=613815301]
+[node name="LeftShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=613815301]
 position = Vector2(-38, 323.5)
 shape = SubResource("RectangleShape2D_onqr8")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="AreaBoundaries" unique_id=1714362268]
+[node name="RightShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=1714362268]
 position = Vector2(1192.25, 326.25)
 shape = SubResource("RectangleShape2D_ycayy")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="AreaBoundaries" unique_id=933848601]
+[node name="TopShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=933848601]
 position = Vector2(577.5, -51)
 shape = SubResource("RectangleShape2D_bw6k5")
