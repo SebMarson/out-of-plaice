@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3h3lb434cgro"
-path="res://.godot/imported/fish_cheese_normal.png-58221f30a9e9cbbb4c2bd66bcda07fd7.ctex"
+uid="uid://c2cd35e8gky2n"
+path="res://.godot/imported/fish_cheese_normal.png-d6c48f4297efed1d69450c98a32c5f6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/images/fish/fish_cheese_normal.png"
-dest_files=["res://.godot/imported/fish_cheese_normal.png-58221f30a9e9cbbb4c2bd66bcda07fd7.ctex"]
+source_file="res://resources/images/Fish/fish_cheese_normal.png"
+dest_files=["res://.godot/imported/fish_cheese_normal.png-d6c48f4297efed1d69450c98a32c5f6b.ctex"]
 
 [params]
 

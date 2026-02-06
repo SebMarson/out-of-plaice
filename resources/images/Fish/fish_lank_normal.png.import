@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce5mu0xsncrr1"
-path="res://.godot/imported/fish_lank_normal.png-2a9aba85d219c91c58bbef8f1a6488d6.ctex"
+uid="uid://csrcgdfv6yoy"
+path="res://.godot/imported/fish_lank_normal.png-1804158e033c758ccedc2226df107ce1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/images/fish/fish_lank_normal.png"
-dest_files=["res://.godot/imported/fish_lank_normal.png-2a9aba85d219c91c58bbef8f1a6488d6.ctex"]
+source_file="res://resources/images/Fish/fish_lank_normal.png"
+dest_files=["res://.godot/imported/fish_lank_normal.png-1804158e033c758ccedc2226df107ce1.ctex"]
 
 [params]
 

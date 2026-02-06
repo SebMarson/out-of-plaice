@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnhg1he5fuevg"
-path="res://.godot/imported/fish_fog_nose_normal.png-af46b3768417e51ddebb4a262a6e2267.ctex"
+uid="uid://dbmphdtqbubh4"
+path="res://.godot/imported/fish_fog_nose_normal.png-033a74f0e7877072d4ccad50496dcb1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/images/fish/fish_fog_nose_normal.png"
-dest_files=["res://.godot/imported/fish_fog_nose_normal.png-af46b3768417e51ddebb4a262a6e2267.ctex"]
+source_file="res://resources/images/Fish/fish_fog_nose_normal.png"
+dest_files=["res://.godot/imported/fish_fog_nose_normal.png-033a74f0e7877072d4ccad50496dcb1d.ctex"]
 
 [params]
 
