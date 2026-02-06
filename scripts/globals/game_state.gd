@@ -34,6 +34,7 @@ func start_timer(_wait_time: float):
 	fish_sold_today = 0
 	fish_destroyed_today = 0
 	current_day = current_day + 1
+	corruption = 0
 
 func _on_timeout() -> void:
 	SignalBus.day_timer_expired.emit()
