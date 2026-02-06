@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://b8cghnqbm6dqm" path="res://resources/images/gui/time-corruption.png" id="4_lrwm8"]
 [ext_resource type="Texture2D" uid="uid://bwf1fclbkmc1x" path="res://resources/images/gui/tool_2.png" id="5_ort37"]
 [ext_resource type="Texture2D" uid="uid://c8juyby2sww8c" path="res://resources/images/gui/tool_3.png" id="6_gv5p5"]
+[ext_resource type="PackedScene" uid="uid://i8bcy4aolruq" path="res://scenes/gui/escape_menu.tscn" id="8_ort37"]
+[ext_resource type="PackedScene" uid="uid://des563d803l43" path="res://scenes/gui/pause_overlay.tscn" id="9_gv5p5"]
 
 [node name="GUI" type="Control" unique_id=217434855]
 layout_mode = 3
@@ -105,5 +107,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="EscapeMenu" parent="." unique_id=1621492436 instance=ExtResource("8_ort37")]
+visible = false
+z_index = 1
+layout_mode = 1
+
+[node name="PauseOverlay" parent="." unique_id=2084692478 instance=ExtResource("9_gv5p5")]
+visible = false
+layout_mode = 1
+mouse_behavior_recursive = 1
 
 [connection signal="pressed" from="ElementsContainer/BottomContainer/HBoxContainer/ReferenceBookButton" to="." method="_on_reference_book_button_pressed"]
