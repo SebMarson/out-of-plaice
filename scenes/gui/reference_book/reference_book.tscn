@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b6yaork5eiufu" path="res://scripts/gui/reference_book/reference_book.gd" id="1_tcxm7"]
 [ext_resource type="Texture2D" uid="uid://uxf6gsceatts" path="res://resources/images/gui/reference_book/page_placeholder.png" id="2_ia8xe"]
 [ext_resource type="Texture2D" uid="uid://cvvaphy8d67ys" path="res://resources/images/gui/reference_book/next_page_placeholder.png" id="3_am5yk"]
-[ext_resource type="Texture2D" uid="uid://d2b6rmfgvc1pp" path="res://resources/images/Fish/Fish_Plaice_Normal.png" id="3_vt62c"]
+[ext_resource type="Texture2D" uid="uid://d2b6rmfgvc1pp" path="res://resources/images/fish/fish_plaice_normal.png" id="3_vt62c"]
 [ext_resource type="Texture2D" uid="uid://n54v7va5gsxl" path="res://resources/images/gui/reference_book/close_book_placeholder.png" id="4_ia8xe"]
 
 [node name="ReferenceBook" type="Node2D" unique_id=1968909042]

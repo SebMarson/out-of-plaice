@@ -4,16 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://brx5vgtsxqppc" path="res://scenes/gui/gui.tscn" id="2_onqr8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5aja"]
-size = Vector2(1331, 110)
+size = Vector2(1331, 127)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onqr8"]
-size = Vector2(96, 667)
+size = Vector2(96, 706.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ycayy"]
-size = Vector2(105.5, 656.5)
+size = Vector2(105.5, 734.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bw6k5"]
-size = Vector2(1329, 116)
+size = Vector2(1392, 116)
 
 [node name="GameScene" type="Node2D" unique_id=1699519175]
 script = ExtResource("1_w5aja")
@@ -23,17 +23,17 @@ script = ExtResource("1_w5aja")
 [node name="AreaBoundaries" type="StaticBody2D" parent="." unique_id=1850232620]
 
 [node name="BottomShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=1682673169]
-position = Vector2(580, 597)
+position = Vector2(646, 667.5)
 shape = SubResource("RectangleShape2D_w5aja")
 
 [node name="LeftShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=613815301]
-position = Vector2(-38, 323.5)
+position = Vector2(-32, 344.75)
 shape = SubResource("RectangleShape2D_onqr8")
 
 [node name="RightShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=1714362268]
-position = Vector2(1192.25, 326.25)
+position = Vector2(1295, 363.875)
 shape = SubResource("RectangleShape2D_ycayy")
 
 [node name="TopShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=933848601]
-position = Vector2(577.5, -51)
+position = Vector2(609, -51)
 shape = SubResource("RectangleShape2D_bw6k5")

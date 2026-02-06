@@ -40,7 +40,7 @@ func _ready() -> void:
 	SignalBus.day_timer_start.emit(25)
 
 func spawn_fish() -> void:
-	var new_fish = FishGenerator.generate_fish(FishGenerator.PLAICE)
+	var new_fish = FishGenerator.generate_random_fish()
 	fish.append(new_fish)
 	add_child(new_fish)
 	

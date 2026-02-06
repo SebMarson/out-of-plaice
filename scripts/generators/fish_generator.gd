@@ -5,6 +5,10 @@ static var fish_scene = preload("res://scenes/entities/fish.tscn")
 
 # Name, normal weight
 const PLAICE = ["Plaice", 400, "res://resources/images/fish/fish_plaice_normal.png"]
+const CHEESE = ["Cheese", 400, "res://resources/images/fish/fish_cheese_normal.png"]
+const FOG_NOSE = ["Fog Nose", 400, "res://resources/images/fish/fish_fog_nose_normal.png"]
+const BI_IMP = ["Bi-Imp", 400, "res://resources/images/fish/fish_bi_imp_normal.png"]
+const LANK = ["Lank", 400, "res://resources/images/fish/fish_lank_normal.png"]
 
 # example call:
 # var fish = FishGenerator.generate_fish(FishGenerator.PLAICE)
@@ -15,6 +19,10 @@ static func generate_fish(_fish_type: Array) -> Fish:
 	var weight = _fish_type[1] * randf_range(0.5, 1.5)
 	
 	# Create and return fish
-	var fish = fish_scene.instantiate()
+	var fish = preload("res://scenes/entities/fish.tscn").instantiate()
 	fish.setup(species, texture, weight, [])
 	return fish
+
+static func generate_random_fish() -> Fish:
+	var all_fish = [PLAICE, CHEESE, FOG_NOSE, BI_IMP, LANK]
+	return generate_fish(all_fish[randi_range(0, 4)])

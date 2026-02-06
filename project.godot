@@ -25,14 +25,10 @@ SignalBus="*res://scripts/globals/signal_bus.gd"
 GameState="*uid://dvs3827maljis"
 TextRepo="*uid://y46rntqpoxmt"
 
-[input]
+[display]
 
-ui_debug_menu={
-"deadzone": 0.2,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":35,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":92,"key_label":0,"unicode":35,"location":0,"echo":false,"script":null)
-]
-}
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [input]
 
