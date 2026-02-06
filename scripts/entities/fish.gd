@@ -26,8 +26,6 @@ func setup(_species: String, _texture: Resource, _weight: int, _oddities: Array)
 
 func _ready() -> void:
 	# Set global position
-	# todo - this shouldn't spawn in the center during actual gameplay, this is just a placeholder
-	self.global_position = (get_viewport_rect().size / 2)
 	self.sleeping = true
 	
 	# Setup child objects

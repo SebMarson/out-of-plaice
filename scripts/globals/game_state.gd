@@ -9,6 +9,9 @@ var fish_destroyed_today: int = 0
 # User stats
 var player_money: int = 0
 
+# Current level info
+var batch_size: int = 2
+
 func _init() -> void:
 	# Setup timer
 	day_timer = Timer.new()
