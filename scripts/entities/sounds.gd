@@ -1,7 +1,7 @@
 class_name sounds
 extends Node
 
-#const COMMON: String = "Common"
+# list all all sound effects
 const badfish_bleghspit: String = "res://resources/audio/sfx/badfish_bleghspit.wav"
 const badfish_eurgghhdisgusting: String = "res://resources/audio/sfx/badfish_eurgghhdisgusting.wav"
 const badfish_slurperherugh: String = "res://resources/audio/sfx/badfish_slurperherugh.wav"
