@@ -12,6 +12,10 @@ var player_money: int = 0
 # Current level info
 var batch_size: int = 2
 
+# Game info
+var corruption: int = 0
+var corruption_max: int = 100
+
 func _init() -> void:
 	# Setup timer
 	day_timer = Timer.new()
@@ -40,3 +44,10 @@ func _on_fish_sale(fish) -> void:
 
 func _on_fish_destroy(fish) -> void:
 	fish_destroyed_today = fish_destroyed_today + 1
+	
+func increase_corruption(amount: int) -> void:
+	corruption = corruption + amount
+	if corruption >= corruption_max:
+		SignalBus.corruption_peaked.emit()
+	else:
+		SignalBus.corruption_increase.emit()

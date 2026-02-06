@@ -20,6 +20,7 @@ func _init():
 func _ready() -> void:
 	# Link signals
 	SignalBus.spawn_fish.connect(spawn_fish)
+	SignalBus.corruption_peaked.connect(_on_corruption_peaked)
 	
 	# Generate bins for the scene
 	var new_bin = bin_scene.instantiate()
@@ -58,4 +59,5 @@ func remove_fish(_fish) -> void:
 func _on_day_timeout():
 	get_tree().change_scene_to_file("res://scenes/menus/end_day_scene.tscn")
 
-	
+func _on_corruption_peaked() -> void:
+	get_tree().change_scene_to_file("res://scenes/menus/fail_scene.tscn")
