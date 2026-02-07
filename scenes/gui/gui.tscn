@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b8cghnqbm6dqm" path="res://resources/images/gui/time-corruption.png" id="4_lrwm8"]
 [ext_resource type="Texture2D" uid="uid://bwf1fclbkmc1x" path="res://resources/images/gui/tool_2.png" id="5_ort37"]
 [ext_resource type="Texture2D" uid="uid://c8juyby2sww8c" path="res://resources/images/gui/tool_3.png" id="6_gv5p5"]
+[ext_resource type="PackedScene" uid="uid://dred0rfo3r272" path="res://scenes/entities/tools/aura_tool.tscn" id="7_6qyx7"]
 [ext_resource type="PackedScene" uid="uid://i8bcy4aolruq" path="res://scenes/gui/escape_menu.tscn" id="8_ort37"]
 [ext_resource type="PackedScene" uid="uid://des563d803l43" path="res://scenes/gui/pause_overlay.tscn" id="9_gv5p5"]
 
@@ -95,6 +96,9 @@ texture = ExtResource("5_ort37")
 layout_mode = 2
 texture = ExtResource("6_gv5p5")
 
+[node name="AuraTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1925155566 instance=ExtResource("7_6qyx7")]
+layout_mode = 2
+
 [node name="TextureRect" type="TextureRect" parent="ElementsContainer/BottomContainer/HBoxContainer" unique_id=204690578]
 layout_mode = 2
 texture = ExtResource("4_lrwm8")
@@ -108,6 +112,28 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="ToolWindowPopup" type="PanelContainer" parent="CenterContainer" unique_id=241001425]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/ToolWindowPopup" unique_id=1632671123]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/ToolWindowPopup/MarginContainer" unique_id=1627967173]
+layout_mode = 2
+
+[node name="HideWindowButton" type="Button" parent="CenterContainer/ToolWindowPopup/MarginContainer/VBoxContainer" unique_id=1028529350]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "X"
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/ToolWindowPopup/MarginContainer/VBoxContainer" unique_id=513949866]
+layout_mode = 2
+
+[node name="ToolInfoLabel" type="Label" parent="CenterContainer/ToolWindowPopup/MarginContainer/VBoxContainer/CenterContainer" unique_id=925135866]
+layout_mode = 2
+text = "Info on the tool results!"
+
 [node name="EscapeMenu" parent="." unique_id=1621492436 instance=ExtResource("8_ort37")]
 visible = false
 z_index = 1
@@ -119,3 +145,4 @@ layout_mode = 1
 mouse_behavior_recursive = 1
 
 [connection signal="pressed" from="ElementsContainer/BottomContainer/HBoxContainer/ReferenceBookButton" to="." method="_on_reference_book_button_pressed"]
+[connection signal="pressed" from="CenterContainer/ToolWindowPopup/MarginContainer/VBoxContainer/HideWindowButton" to="." method="_on_hide_window_button_pressed"]

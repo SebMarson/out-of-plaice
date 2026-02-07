@@ -34,8 +34,7 @@ func _ready() -> void:
 	fish_sprite.texture = texture_normal
 	fish_sprite.scale = Vector2(0.1, 0.1)
 	collision_shape.z_index = 1
-	
-	
+
 func _process(_delta) -> void:
 	pass
 

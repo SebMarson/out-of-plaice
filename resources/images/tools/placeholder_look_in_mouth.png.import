@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxxcdolyot8s3"
-path="res://.godot/imported/placeholder_weighing_scales.png-b1c4da420680dc222e40ea81d5e69fd2.ctex"
+uid="uid://3erejbtecksy"
+path="res://.godot/imported/placeholder_look_in_mouth.png-0b2dabefce4310844ac915c938c2e5cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/images/placeholder_weighing_scales.png"
-dest_files=["res://.godot/imported/placeholder_weighing_scales.png-b1c4da420680dc222e40ea81d5e69fd2.ctex"]
+source_file="res://resources/images/tools/placeholder_look_in_mouth.png"
+dest_files=["res://.godot/imported/placeholder_look_in_mouth.png-0b2dabefce4310844ac915c938c2e5cd.ctex"]
 
 [params]
 

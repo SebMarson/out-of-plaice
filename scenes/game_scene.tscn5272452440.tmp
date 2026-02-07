@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bxcbtuqadxksm"]
+
+[ext_resource type="Script" uid="uid://clnc6o48i06aq" path="res://scripts/game_scene.gd" id="1_w5aja"]
+[ext_resource type="PackedScene" uid="uid://brx5vgtsxqppc" path="res://scenes/gui/gui.tscn" id="2_onqr8"]
+[ext_resource type="Texture2D" uid="uid://c8h4kccx6uw2l" path="res://resources/images/environment/environment_dock_floor.png" id="3_ycayy"]
+[ext_resource type="Texture2D" uid="uid://csmdpnfxxi8f5" path="res://resources/images/environment/environment_table.png" id="4_bw6k5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5aja"]
+size = Vector2(1331, 188)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onqr8"]
+size = Vector2(96, 706.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycayy"]
+size = Vector2(105.5, 734.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bw6k5"]
+size = Vector2(1392, 116)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3j0m"]
+size = Vector2(442, 138)
+
+[node name="GameScene" type="Node2D" unique_id=1699519175]
+script = ExtResource("1_w5aja")
+
+[node name="BackgroundSprite" type="Sprite2D" parent="." unique_id=218776990]
+position = Vector2(640, 358)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_ycayy")
+
+[node name="TableSprite" type="Sprite2D" parent="." unique_id=1127452033]
+position = Vector2(609, 334)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_bw6k5")
+
+[node name="GUI" parent="." unique_id=666454751 instance=ExtResource("2_onqr8")]
+
+[node name="AreaBoundaries" type="StaticBody2D" parent="." unique_id=1850232620]
+
+[node name="BottomShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=1682673169]
+position = Vector2(646, 637)
+shape = SubResource("RectangleShape2D_w5aja")
+
+[node name="LeftShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=613815301]
+position = Vector2(-32, 344.75)
+shape = SubResource("RectangleShape2D_onqr8")
+
+[node name="RightShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=1714362268]
+position = Vector2(1295, 363.875)
+shape = SubResource("RectangleShape2D_ycayy")
+
+[node name="TopShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=933848601]
+position = Vector2(609, -51)
+shape = SubResource("RectangleShape2D_bw6k5")
+
+[node name="SpawnArea" type="Area2D" parent="." unique_id=489085022]
+
+[node name="SpawnShape" type="CollisionShape2D" parent="SpawnArea" unique_id=299830334]
+position = Vector2(644, 250)
+shape = SubResource("RectangleShape2D_y3j0m")

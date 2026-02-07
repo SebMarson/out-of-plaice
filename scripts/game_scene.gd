@@ -21,6 +21,7 @@ func _ready() -> void:
 	# Link signals
 	SignalBus.spawn_fish.connect(spawn_fish)
 	SignalBus.corruption_peaked.connect(_on_corruption_peaked)
+	SignalBus.tool_triggered.connect(_on_tool_triggered)
 	
 	# Generate bins for the scene
 	var new_bin = bin_scene.instantiate()
@@ -42,6 +43,7 @@ func _ready() -> void:
 	SignalBus.day_timer_start.emit(25)
 	
 func _process(_delta) -> void:
+	# todo - bad way to do this, should just have trigger on each fish destroy that if the array is zero we regen then
 	if fish.size() == 0:
 		for i in GameState.batch_size:
 			var new_fish = FishGenerator.generate_random_fish(spawn_shape.shape.size, get_viewport_rect().size/2)
@@ -61,3 +63,16 @@ func _on_day_timeout():
 
 func _on_corruption_peaked() -> void:
 	get_tree().change_scene_to_file("res://scenes/menus/fail_scene.tscn")
+
+func _on_tool_triggered(tool) -> void:
+	# Check if the tool was released while hovering any fish
+	var space = get_world_2d().direct_space_state
+	var query = PhysicsPointQueryParameters2D.new()
+	query.position = get_global_mouse_position()
+	query.collide_with_areas = true
+	
+	var result = space.intersect_point(query)
+	for i in result:
+		var body = i.collider
+		if body is RigidBody2D and body is Fish:
+			SignalBus.tool_results_window_triggered.emit(tool.get_tool_result(body))

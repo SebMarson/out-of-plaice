@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clvm1p6adr5w4"
-path="res://.godot/imported/placeholder_check_aura.png-a22cb5216e5c1568a3ac652dc93ca0a1.ctex"
+path="res://.godot/imported/placeholder_check_aura.png-4cc42bda9935d8b02b281ad443983d71.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/images/placeholder_check_aura.png"
-dest_files=["res://.godot/imported/placeholder_check_aura.png-a22cb5216e5c1568a3ac652dc93ca0a1.ctex"]
+source_file="res://resources/images/tools/placeholder_check_aura.png"
+dest_files=["res://.godot/imported/placeholder_check_aura.png-4cc42bda9935d8b02b281ad443983d71.ctex"]
 
 [params]
 
