@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://her3eaouui8f"]
 
 [ext_resource type="Script" uid="uid://doibnqfeg5kpc" path="res://scripts/menus/fullscreen_checkbox.gd" id="1_7i3iu"]
+[ext_resource type="Script" uid="uid://c25f3bqwcs2eg" path="res://scenes/menus/settings_menu.gd" id="1_da10i"]
 [ext_resource type="Script" uid="uid://dhc401bk26qjw" path="res://scripts/menus/volume_slider.gd" id="1_hayap"]
 [ext_resource type="Script" uid="uid://cxvrqud270x5c" path="res://scripts/menus/music_volume.gd" id="3_ojvp1"]
 [ext_resource type="Script" uid="uid://t0okgkbf3xwo" path="res://scripts/menus/sfx_volume.gd" id="4_da10i"]
@@ -14,6 +15,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_da10i")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=241435459]
 layout_mode = 1
@@ -74,6 +76,10 @@ max_value = 1.0
 step = 0.05
 script = ExtResource("4_da10i")
 
+[node name="back" type="Button" parent="CenterContainer/UISettingCheckbox" unique_id=653618007]
+layout_mode = 2
+text = "Back"
+
 [connection signal="toggled" from="CenterContainer/UISettingCheckbox/fullscreen_checkbox" to="CenterContainer/UISettingCheckbox/fullscreen_checkbox" method="_on_toggled"]
 [connection signal="mouse_exited" from="CenterContainer/UISettingCheckbox/master_volume" to="CenterContainer/UISettingCheckbox/master_volume" method="release_focus"]
 [connection signal="value_changed" from="CenterContainer/UISettingCheckbox/master_volume" to="CenterContainer/UISettingCheckbox/master_volume" method="_on_value_changed"]
@@ -81,3 +87,4 @@ script = ExtResource("4_da10i")
 [connection signal="value_changed" from="CenterContainer/UISettingCheckbox/music_volume" to="CenterContainer/UISettingCheckbox/music_volume" method="_on_value_changed"]
 [connection signal="mouse_exited" from="CenterContainer/UISettingCheckbox/sfx_volume" to="CenterContainer/UISettingCheckbox/sfx_volume" method="release_focus"]
 [connection signal="value_changed" from="CenterContainer/UISettingCheckbox/sfx_volume" to="CenterContainer/UISettingCheckbox/sfx_volume" method="_on_value_changed"]
+[connection signal="pressed" from="CenterContainer/UISettingCheckbox/back" to="." method="_on_back_pressed"]
