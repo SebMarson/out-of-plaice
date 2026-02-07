@@ -16,9 +16,11 @@ func _ready() -> void:
 # function to play music and check if already playing
 func play_music( path_music: String):
 	music_player.stream = load(path_music)
+	music_player.bus = "music"
 	music_player.play() 
-
+ 
 # function to play sound effects and check if already playing
 func play_sfx(path_sfx: String):
 	sfx_player.stream = load(path_sfx)
+	sfx_player.bus = "sfx"
 	sfx_player.play() 

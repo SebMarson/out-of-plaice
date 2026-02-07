@@ -27,6 +27,7 @@ buses/default_bus_layout="uid://dba7yh1ajl5c4"
 
 SignalBus="*res://scripts/globals/signal_bus.gd"
 GameState="*uid://dvs3827maljis"
+Audio="*uid://cm3bj4cx7m8kp"
 
 [input]
 

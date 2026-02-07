@@ -4,12 +4,15 @@ extends Control
 @onready var master_v_slider = get_node("CenterContainer/UISettingCheckbox/master_volume")
 @onready var music_v_slider = get_node("CenterContainer/UISettingCheckbox/music_volume")
 @onready var sfx_v_slider = get_node("CenterContainer/UISettingCheckbox/sfx_volume")
+@export var audio_bus_name := "Master"
+@onready var _bus := AudioServer.get_bus_index(audio_bus_name)
 
 #set sfx sound so can hear - only plays ones
 func _ready() -> void:
 	Audio.play_sfx(Sounds.goodfish_delicious)
 	music_v_slider.value = db_to_linear(Audio.music_player.volume_db) 
 	sfx_v_slider.value = db_to_linear(Audio.sfx_player.volume_db) 
+	master_v_slider.value = db_to_linear(AudioServer.get_bus_volume_db(_bus))
 
 # back button to go back to the main menu
 func _on_back_pressed() -> void:
@@ -31,4 +34,4 @@ func _on_value_changed_music(value: float) -> void:
 
 # master slider change function
 func _on_value_changed_master(value: float) -> void:
-	Audio.music_player.volume_db = linear_to_db(value)
+	AudioServer.set_bus_volume_db(_bus, linear_to_db(value))
