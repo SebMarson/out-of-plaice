@@ -80,7 +80,7 @@ script = ExtResource("4_da10i")
 layout_mode = 2
 text = "Back"
 
-[connection signal="toggled" from="CenterContainer/UISettingCheckbox/fullscreen_checkbox" to="CenterContainer/UISettingCheckbox/fullscreen_checkbox" method="_on_toggled"]
+[connection signal="toggled" from="CenterContainer/UISettingCheckbox/fullscreen_checkbox" to="." method="_on_toggled"]
 [connection signal="mouse_exited" from="CenterContainer/UISettingCheckbox/master_volume" to="CenterContainer/UISettingCheckbox/master_volume" method="release_focus"]
 [connection signal="value_changed" from="CenterContainer/UISettingCheckbox/master_volume" to="CenterContainer/UISettingCheckbox/master_volume" method="_on_value_changed"]
 [connection signal="mouse_exited" from="CenterContainer/UISettingCheckbox/music_volume" to="CenterContainer/UISettingCheckbox/music_volume" method="release_focus"]

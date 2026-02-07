@@ -1,4 +1,4 @@
-class_name sounds
+class_name Sounds
 extends Node
 
 # list all all sound effects

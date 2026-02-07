@@ -1,4 +1,4 @@
-class_name music
+class_name Music
 extends Node
 
 # list all all music tracks for the game
