@@ -29,13 +29,13 @@ func _ready() -> void:
 	
 	# Generate bins for the scene
 	var new_bin = bin_scene.instantiate()
-	new_bin.global_position = Vector2(200, 500)
+	new_bin.global_position = Vector2(150, 500)
 	new_bin.state = 1
 	bins.append(new_bin)
 	add_child(new_bin)
 	
 	var second_bin = bin_scene.instantiate()
-	second_bin.global_position = Vector2(1000, 500)
+	second_bin.global_position = Vector2(1100, 500)
 	second_bin.state = 2
 	bins.append(second_bin)
 	add_child(second_bin)

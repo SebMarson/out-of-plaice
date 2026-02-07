@@ -24,12 +24,12 @@ size = Vector2(442, 138)
 script = ExtResource("1_w5aja")
 
 [node name="BackgroundSprite" type="Sprite2D" parent="." unique_id=218776990]
-position = Vector2(640, 358)
+position = Vector2(644, 360)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_ycayy")
 
 [node name="TableSprite" type="Sprite2D" parent="." unique_id=1127452033]
-position = Vector2(609, 334)
+position = Vector2(623, 338)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_bw6k5")
 
