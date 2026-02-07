@@ -27,13 +27,7 @@ buses/default_bus_layout="uid://dba7yh1ajl5c4"
 
 SignalBus="*res://scripts/globals/signal_bus.gd"
 GameState="*uid://dvs3827maljis"
-TextRepo="*uid://bbormn3ljcond"
 Audio="*uid://cm3bj4cx7m8kp"
-
-[display]
-
-window/size/viewport_width=1280
-window/size/viewport_height=720
 
 [input]
 

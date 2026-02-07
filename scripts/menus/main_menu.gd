@@ -5,6 +5,7 @@ func _ready() -> void:
 	Audio.play_music(Music.another_day)
 	#Audio.play_sfx(SFX.bouy_bell)
 
+
 func _on_start_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/game_scene.tscn")
 
