@@ -9,6 +9,10 @@ signal spawn_fish()
 signal destroy_fish(fish)
 signal sell_fish(fish)
 
+# Tool signals
+signal tool_triggered(tool)
+signal tool_results_window_triggered(tool_result_text)
+
 # Game State Signals
 signal day_timer_expired()
 signal day_timer_start(length)

@@ -1,14 +1,20 @@
 [gd_scene format=3 uid="uid://c41ss5wrbpxjy"]
 
 [ext_resource type="Script" uid="uid://delq1oytv4j5m" path="res://scripts/entities/bin.gd" id="1_7unrk"]
+[ext_resource type="Texture2D" uid="uid://ca54bay8je5rj" path="res://resources/images/environment/environment_trashbin.png" id="2_0fvd0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fvd0"]
-size = Vector2(100, 100)
+size = Vector2(174, 113)
 
 [node name="Bin" type="Area2D" unique_id=856701052]
 script = ExtResource("1_7unrk")
 
+[node name="BinSprite" type="Sprite2D" parent="." unique_id=1346984735]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_0fvd0")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=669048000]
+position = Vector2(2, -47.5)
 shape = SubResource("RectangleShape2D_0fvd0")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

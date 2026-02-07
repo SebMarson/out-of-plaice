@@ -5,6 +5,7 @@ extends Control
 @onready var player_money_value_label = $MarginContainer/VBoxContainer/HBoxContainer2/PlayerMoneyValueLabel
 
 func _ready() -> void:
+	Audio.play_music(Music.another_day)
 	fish_sold_value_label.text = "%d" % [GameState.fish_sold_today]
 	fish_destroyed_value_label.text = "%d" % [GameState.fish_destroyed_today]
 	player_money_value_label.text = "%d" % [GameState.player_money]

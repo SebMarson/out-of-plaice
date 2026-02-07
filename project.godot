@@ -19,11 +19,16 @@ run/main_scene="uid://cntkpp5f0jd3v"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://dba7yh1ajl5c4"
+
 [autoload]
 
 SignalBus="*res://scripts/globals/signal_bus.gd"
 GameState="*uid://dvs3827maljis"
-TextRepo="*uid://y46rntqpoxmt"
+TextRepo="*uid://bbormn3ljcond"
+Audio="*uid://cm3bj4cx7m8kp"
 
 [display]
 
