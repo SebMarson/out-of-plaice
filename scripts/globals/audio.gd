@@ -7,10 +7,10 @@ var sfx_player
 # ready function - to make them exists (as ready)
 func _ready() -> void:
 	music_player = AudioStreamPlayer.new()
-	music_player.volume_db = 0.5
+#	music_player.volume_db = 0.3
 	add_child(music_player)
 	sfx_player = AudioStreamPlayer.new()
-	sfx_player.volume_db = 0.5
+#	sfx_player.volume_db = 0.3
 	add_child(sfx_player)
 
 # function to play music and check if already playing
