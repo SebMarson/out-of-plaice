@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://cv1m6cm4t0225"]
+
+[ext_resource type="FontFile" uid="uid://cjc0f10p37jme" path="res://resources/Fonts/BOOKOS.TTF" id="1_afbhb"]
+
+[resource]
+default_font = ExtResource("1_afbhb")
+default_font_size = 20

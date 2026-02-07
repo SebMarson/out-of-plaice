@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bn4acie3tkuid"
-path="res://.godot/imported/goodfish_lipsmackingyeah.wav-6d9e94f1588268e02cfebb60b50c74b9.sample"
+path="res://.godot/imported/goodfish_lipsmackingyeah.wav-450882ec1d48ee479260ffc1b4dbd61a.sample"
 
 [deps]
 
-source_file="res://resources/audio/sfx/goodfish_lipsmackingyeah.wav"
-dest_files=["res://.godot/imported/goodfish_lipsmackingyeah.wav-6d9e94f1588268e02cfebb60b50c74b9.sample"]
+source_file="res://resources/Audio/sfx/goodfish_lipsmackingyeah.wav"
+dest_files=["res://.godot/imported/goodfish_lipsmackingyeah.wav-450882ec1d48ee479260ffc1b4dbd61a.sample"]
 
 [params]
 

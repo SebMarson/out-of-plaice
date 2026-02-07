@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bqlnuf8gp0y1l"
-path="res://.godot/imported/badfish_eurgghhdisgusting.wav-e7576748d22e77a30a24f120f3192236.sample"
+path="res://.godot/imported/badfish_eurgghhdisgusting.wav-c5c37c63b9eb1ffdf1036d88b22d659d.sample"
 
 [deps]
 
-source_file="res://resources/audio/sfx/badfish_eurgghhdisgusting.wav"
-dest_files=["res://.godot/imported/badfish_eurgghhdisgusting.wav-e7576748d22e77a30a24f120f3192236.sample"]
+source_file="res://resources/Audio/sfx/badfish_eurgghhdisgusting.wav"
+dest_files=["res://.godot/imported/badfish_eurgghhdisgusting.wav-c5c37c63b9eb1ffdf1036d88b22d659d.sample"]
 
 [params]
 

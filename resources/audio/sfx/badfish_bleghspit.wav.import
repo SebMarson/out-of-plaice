@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dxn8ma88kq4w1"
-path="res://.godot/imported/badfish_bleghspit.wav-735fc5bf566bbc9619c6d6bf459b0525.sample"
+path="res://.godot/imported/badfish_bleghspit.wav-7e941890957fffe0165f198b4d539fb7.sample"
 
 [deps]
 
-source_file="res://resources/audio/sfx/badfish_bleghspit.wav"
-dest_files=["res://.godot/imported/badfish_bleghspit.wav-735fc5bf566bbc9619c6d6bf459b0525.sample"]
+source_file="res://resources/Audio/sfx/badfish_bleghspit.wav"
+dest_files=["res://.godot/imported/badfish_bleghspit.wav-7e941890957fffe0165f198b4d539fb7.sample"]
 
 [params]
 

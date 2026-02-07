@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://cvwnd63sdt656"]
+[gd_scene format=3 uid="uid://b2w7wvjvp3sbn"]
 
-[ext_resource type="Script" uid="uid://6wymsrc0r6vc" path="res://scripts/menus/fail_scene.gd" id="1_2gcj5"]
+[ext_resource type="Script" path="res://scripts/menus/fail_scene.gd" id="1_2gcj5"]
+[ext_resource type="Theme" uid="uid://cv1m6cm4t0225" path="res://FailScreenTheme.tres" id="2_wk2d6"]
 
 [node name="FailScene" type="Control" unique_id=1234848961]
 layout_mode = 3
@@ -24,12 +25,19 @@ layout_mode = 2
 
 [node name="FailTextLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1735213763]
 layout_mode = 2
+theme = ExtResource("2_wk2d6")
 theme_override_colors/font_color = Color(1, 1, 1, 0.84705883)
 theme_override_font_sizes/font_size = 35
-text = ":("
+text = "You have allowed too many \"bad\" fish to be eaten.
+The local community has become too corrupted.
+You no longer have any business. 
+Just the sound of the ocean.
+And the horrors within."
+horizontal_alignment = 1
 
 [node name="TryAgainButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1618318035]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Try Again?"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/TryAgainButton" to="." method="_on_try_again_button_pressed"]
