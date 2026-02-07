@@ -3,10 +3,9 @@
 [ext_resource type="Script" uid="uid://qh5ipht3cg47" path="res://scripts/gui/gui.gd" id="1_q21vd"]
 [ext_resource type="PackedScene" uid="uid://blfkit4v8y4xv" path="res://scenes/gui/debug_menu.tscn" id="2_x2qsw"]
 [ext_resource type="Texture2D" uid="uid://da0nwykp5quwg" path="res://resources/images/gui/reference_book/reference_book_cover.png" id="3_g05bf"]
-[ext_resource type="Texture2D" uid="uid://c5v40lhrhhb86" path="res://resources/images/gui/tool_1.png" id="4_g05bf"]
 [ext_resource type="Texture2D" uid="uid://b8cghnqbm6dqm" path="res://resources/images/gui/time-corruption.png" id="4_lrwm8"]
-[ext_resource type="Texture2D" uid="uid://bwf1fclbkmc1x" path="res://resources/images/gui/tool_2.png" id="5_ort37"]
-[ext_resource type="Texture2D" uid="uid://c8juyby2sww8c" path="res://resources/images/gui/tool_3.png" id="6_gv5p5"]
+[ext_resource type="PackedScene" uid="uid://c4kn82qomfy57" path="res://scenes/entities/tools/weight_tool.tscn" id="5_ort37"]
+[ext_resource type="PackedScene" uid="uid://ce6q3y71l7n2p" path="res://scenes/entities/tools/lens_tool.tscn" id="6_gv5p5"]
 [ext_resource type="PackedScene" uid="uid://dred0rfo3r272" path="res://scenes/entities/tools/aura_tool.tscn" id="7_6qyx7"]
 [ext_resource type="PackedScene" uid="uid://i8bcy4aolruq" path="res://scenes/gui/escape_menu.tscn" id="8_ort37"]
 [ext_resource type="PackedScene" uid="uid://des563d803l43" path="res://scenes/gui/pause_overlay.tscn" id="9_gv5p5"]
@@ -84,19 +83,13 @@ stretch_mode = 0
 layout_mode = 2
 size_flags_horizontal = 6
 
-[node name="TextureRect" type="TextureRect" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1410965175]
-layout_mode = 2
-texture = ExtResource("4_g05bf")
-
-[node name="TextureRect2" type="TextureRect" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=517447007]
-layout_mode = 2
-texture = ExtResource("5_ort37")
-
-[node name="TextureRect3" type="TextureRect" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1664456899]
-layout_mode = 2
-texture = ExtResource("6_gv5p5")
-
 [node name="AuraTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1925155566 instance=ExtResource("7_6qyx7")]
+layout_mode = 2
+
+[node name="WeightTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1825591970 instance=ExtResource("5_ort37")]
+layout_mode = 2
+
+[node name="LensTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1809914959 instance=ExtResource("6_gv5p5")]
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="ElementsContainer/BottomContainer/HBoxContainer" unique_id=204690578]
