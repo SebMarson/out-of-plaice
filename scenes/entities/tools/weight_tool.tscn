@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://behlo47jvamko"]
+[gd_scene format=3 uid="uid://c4kn82qomfy57"]
 
-[ext_resource type="Script" uid="uid://dy0ivvf33uoef" path="res://scripts/entities/tools/weight_tool.gd" id="1_gur6t"]
+[ext_resource type="Script" path="res://scripts/entities/tools/weight_tool.gd" id="1_gur6t"]
 [ext_resource type="Texture2D" uid="uid://cxxcdolyot8s3" path="res://resources/images/tools/placeholder_weighing_scales.png" id="2_3mtda"]
 
 [node name="WeightTool" type="Control" unique_id=1925155566]
