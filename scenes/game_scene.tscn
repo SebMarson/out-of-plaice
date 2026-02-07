@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://brx5vgtsxqppc" path="res://scenes/gui/gui.tscn" id="2_onqr8"]
 [ext_resource type="Texture2D" uid="uid://c8h4kccx6uw2l" path="res://resources/images/environment/environment_dock_floor.png" id="3_ycayy"]
 [ext_resource type="Texture2D" uid="uid://csmdpnfxxi8f5" path="res://resources/images/environment/environment_table.png" id="4_bw6k5"]
+[ext_resource type="Texture2D" uid="uid://itopyc8ae6vj" path="res://resources/images/environment/environment_scene_reference.png" id="5_y3j0m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5aja"]
 size = Vector2(1331, 188)
@@ -24,13 +25,13 @@ size = Vector2(442, 138)
 script = ExtResource("1_w5aja")
 
 [node name="BackgroundSprite" type="Sprite2D" parent="." unique_id=218776990]
-position = Vector2(644, 360)
-scale = Vector2(0.5, 0.5)
+position = Vector2(582, 327.49997)
+scale = Vector2(0.4459196, 0.44482997)
 texture = ExtResource("3_ycayy")
 
 [node name="TableSprite" type="Sprite2D" parent="." unique_id=1127452033]
-position = Vector2(623, 338)
-scale = Vector2(0.5, 0.5)
+position = Vector2(569.5, 325)
+scale = Vector2(0.45632017, 0.432406)
 texture = ExtResource("4_bw6k5")
 
 [node name="GUI" parent="." unique_id=666454751 instance=ExtResource("2_onqr8")]
@@ -58,3 +59,11 @@ shape = SubResource("RectangleShape2D_bw6k5")
 [node name="SpawnShape" type="CollisionShape2D" parent="SpawnArea" unique_id=299830334]
 position = Vector2(644, 250)
 shape = SubResource("RectangleShape2D_y3j0m")
+
+[node name="EnvironmentSceneReference" type="Sprite2D" parent="." unique_id=1618058382]
+visible = false
+z_index = 1
+z_as_relative = false
+position = Vector2(575.9375, 325.93747)
+scale = Vector2(0.44987318, 0.45255044)
+texture = ExtResource("5_y3j0m")
