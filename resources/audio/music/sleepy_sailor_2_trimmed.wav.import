@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d1853kc5weypu"
-path="res://.godot/imported/sleepy_sailor_2_trimmed.wav-32086af63a5ef678e9efd8f8128eac01.sample"
+path="res://.godot/imported/sleepy_sailor_2_trimmed.wav-8bb47dc13ec62039425620b6ebc6b054.sample"
 
 [deps]
 
-source_file="res://resources/audio/music/sleepy_sailor_2_trimmed.wav"
-dest_files=["res://.godot/imported/sleepy_sailor_2_trimmed.wav-32086af63a5ef678e9efd8f8128eac01.sample"]
+source_file="res://resources/Audio/music/sleepy_sailor_2_trimmed.wav"
+dest_files=["res://.godot/imported/sleepy_sailor_2_trimmed.wav-8bb47dc13ec62039425620b6ebc6b054.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d4gj3g5w3prqk"
-path="res://.godot/imported/badfish_slurperugherugh.wav-4015788bd2f173d67467b74aca12f0b3.sample"
+path="res://.godot/imported/badfish_slurperugherugh.wav-3638f454874bb5a9d07369047d3db963.sample"
 
 [deps]
 
-source_file="res://resources/audio/sfx/badfish_slurperugherugh.wav"
-dest_files=["res://.godot/imported/badfish_slurperugherugh.wav-4015788bd2f173d67467b74aca12f0b3.sample"]
+source_file="res://resources/Audio/sfx/badfish_slurperugherugh.wav"
+dest_files=["res://.godot/imported/badfish_slurperugherugh.wav-3638f454874bb5a9d07369047d3db963.sample"]
 
 [params]
 

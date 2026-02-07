@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://2pbmkkesikwe"
-path="res://.godot/imported/badfish_slurplipsmackeughh.wav-326b42398b4daec1ff87784d0faef3ed.sample"
+path="res://.godot/imported/badfish_slurplipsmackeughh.wav-c3e43765efc685410c2a4dc152905af8.sample"
 
 [deps]
 
-source_file="res://resources/audio/sfx/badfish_slurplipsmackeughh.wav"
-dest_files=["res://.godot/imported/badfish_slurplipsmackeughh.wav-326b42398b4daec1ff87784d0faef3ed.sample"]
+source_file="res://resources/Audio/sfx/badfish_slurplipsmackeughh.wav"
+dest_files=["res://.godot/imported/badfish_slurplipsmackeughh.wav-c3e43765efc685410c2a4dc152905af8.sample"]
 
 [params]
 

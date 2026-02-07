@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dmyjc201suo5d"
-path="res://.godot/imported/goodfish_ahhh.wav-7387eebc5c274f8d36674e9f50a5df8c.sample"
+path="res://.godot/imported/goodfish_ahhh.wav-b2f9f01e43e39ab676219f1b24261517.sample"
 
 [deps]
 
-source_file="res://resources/audio/sfx/goodfish_ahhh.wav"
-dest_files=["res://.godot/imported/goodfish_ahhh.wav-7387eebc5c274f8d36674e9f50a5df8c.sample"]
+source_file="res://resources/Audio/sfx/goodfish_ahhh.wav"
+dest_files=["res://.godot/imported/goodfish_ahhh.wav-b2f9f01e43e39ab676219f1b24261517.sample"]
 
 [params]
 
