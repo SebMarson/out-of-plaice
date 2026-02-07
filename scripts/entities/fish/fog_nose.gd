@@ -17,4 +17,7 @@ func spawn() -> Fish:
 	new_plaice.rarity = Rarity.RARE
 	new_plaice.glow = true
 	
+	# Taint it, maybe
+	randomize_fish(new_plaice)
+	
 	return new_plaice
