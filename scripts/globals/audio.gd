@@ -1,8 +1,8 @@
 extends Node
 
 # create 2 audio players
-var music_player 
-var sfx_player 
+var music_player: AudioStreamPlayer
+var sfx_player: AudioStreamPlayer
 
 # ready function - to make them exists (as ready)
 func _ready() -> void:
@@ -24,3 +24,9 @@ func play_sfx(path_sfx: String):
 	sfx_player.stream = load(path_sfx)
 	sfx_player.bus = "sfx"
 	sfx_player.play() 
+	
+func stop_sfx():
+	sfx_player.stop()
+
+func _loop_music_player():
+	music_player.play()

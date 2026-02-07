@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://p53g28rrdfcl"]
+
+[ext_resource type="Script" uid="uid://b6yaork5eiufu" path="res://scripts/gui/reference_book/reference_book.gd" id="1_tcxm7"]
+[ext_resource type="Texture2D" uid="uid://uxf6gsceatts" path="res://resources/images/gui/reference_book/page_placeholder.png" id="2_ia8xe"]
+[ext_resource type="Texture2D" uid="uid://cvvaphy8d67ys" path="res://resources/images/gui/reference_book/next_page_placeholder.png" id="3_am5yk"]
+[ext_resource type="Texture2D" uid="uid://6kf8ujccrot8" path="res://resources/images/fish/fish_plaice_normal.png" id="3_vt62c"]
+[ext_resource type="Texture2D" uid="uid://n54v7va5gsxl" path="res://resources/images/gui/reference_book/close_book_placeholder.png" id="4_ia8xe"]
+
+[node name="ReferenceBook" type="Node2D" unique_id=1968909042]
+script = ExtResource("1_tcxm7")
+
+[node name="PageSprite" type="Sprite2D" parent="." unique_id=215531382]
+scale = Vector2(5, 5)
+texture = ExtResource("2_ia8xe")
+
+[node name="TitleText" type="Label" parent="." unique_id=1350820152]
+offset_left = -149.0
+offset_top = -174.0
+offset_right = 144.0
+offset_bottom = -139.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Lorem"
+horizontal_alignment = 1
+
+[node name="FullPageChildren" type="Control" parent="." unique_id=400950691]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PageText" type="Label" parent="FullPageChildren" unique_id=1983112928]
+layout_mode = 0
+offset_left = -162.0
+offset_top = -129.0
+offset_right = 162.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "lapis lorem"
+autowrap_mode = 3
+
+[node name="FishPageChildren" type="Control" parent="." unique_id=1437064640]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FishSprite" type="Sprite2D" parent="FishPageChildren" unique_id=1305495542]
+position = Vector2(-99.99999, -67.99999)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_vt62c")
+
+[node name="FishDescLabel" type="Label" parent="FishPageChildren" unique_id=1142740254]
+layout_mode = 0
+offset_left = -33.0
+offset_top = -124.0
+offset_right = 161.0
+offset_bottom = -29.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Loreli"
+autowrap_mode = 3
+
+[node name="HealthyTitleLabel" type="Label" parent="FishPageChildren" unique_id=1056280548]
+layout_mode = 0
+offset_left = -60.0
+offset_top = -26.0
+offset_right = 62.0
+offset_bottom = -3.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Healthy Stats"
+
+[node name="GridContainer" type="GridContainer" parent="FishPageChildren" unique_id=778315550]
+layout_mode = 0
+offset_left = -157.0
+offset_top = 21.0
+offset_right = 158.0
+offset_bottom = 98.0
+columns = 2
+
+[node name="WeightLabel" type="Label" parent="FishPageChildren/GridContainer" unique_id=1456412274]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Weight: 1g"
+
+[node name="ParasitesLabel" type="Label" parent="FishPageChildren/GridContainer" unique_id=490012064]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Parasites: None"
+
+[node name="AuraLabel" type="Label" parent="FishPageChildren/GridContainer" unique_id=1245122208]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Aura: Indecisive"
+
+[node name="ValueLabel" type="Label" parent="FishPageChildren/GridContainer" unique_id=1910110675]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Value: High"
+
+[node name="RarityLabel" type="Label" parent="FishPageChildren/GridContainer" unique_id=1391054730]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Rarity: Common"
+
+[node name="GlowLabel" type="Label" parent="FishPageChildren" unique_id=2070996266]
+layout_mode = 0
+offset_left = -63.0
+offset_top = 109.0
+offset_right = 62.0
+offset_bottom = 132.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Should not glow"
+
+[node name="NextPageButton" type="TextureButton" parent="." unique_id=2030013052]
+offset_left = 100.0
+offset_top = 109.0
+offset_right = 170.0
+offset_bottom = 184.0
+texture_normal = ExtResource("3_am5yk")
+
+[node name="PrevPageButton" type="TextureButton" parent="." unique_id=1349632767]
+offset_left = -168.0
+offset_top = 106.0
+offset_right = -98.0
+offset_bottom = 181.0
+texture_normal = ExtResource("3_am5yk")
+flip_h = true
+
+[node name="CloseButton" type="TextureButton" parent="." unique_id=2140146494]
+offset_left = 134.0
+offset_top = -182.0
+offset_right = 204.0
+offset_bottom = -107.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_ia8xe")
+
+[connection signal="pressed" from="NextPageButton" to="." method="_on_next_page_button_pressed"]
+[connection signal="pressed" from="PrevPageButton" to="." method="_on_prev_page_button_pressed"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

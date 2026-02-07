@@ -1,8 +1,9 @@
 extends Control
 
-# music test
 func _ready() -> void:
-	Audio.play_music(Music.sleepy_sailor_1)
+	GameState.current_day = 0
+	Audio.play_music(Music.another_day)
+	#Audio.play_sfx(SFX.bouy_bell)
 
 
 func _on_start_button_pressed() -> void:

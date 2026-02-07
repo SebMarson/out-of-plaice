@@ -43,4 +43,28 @@ text = "Day time left:"
 [node name="DayTimeValueLabel" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=318735568]
 layout_mode = 2
 
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer" unique_id=1040224659]
+layout_mode = 2
+
+[node name="CorruptionLabel" type="Label" parent="VBoxContainer/HBoxContainer4" unique_id=1366850324]
+layout_mode = 2
+text = "Corruption: "
+
+[node name="CorruptionValueLabel" type="Label" parent="VBoxContainer/HBoxContainer4" unique_id=365349094]
+layout_mode = 2
+text = "0"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer" unique_id=89327793]
+layout_mode = 2
+
+[node name="CorruptionUpButton" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=1893024943]
+layout_mode = 2
+text = "Corruption ++"
+
+[node name="CorruptionDownButton" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=1836522248]
+layout_mode = 2
+text = "Corruption --"
+
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/SpawnFishButton" to="." method="_on_spawn_fish_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer5/CorruptionUpButton" to="." method="_on_corruption_up_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer5/CorruptionDownButton" to="." method="_on_corruption_down_button_pressed"]

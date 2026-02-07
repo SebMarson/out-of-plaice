@@ -3,18 +3,22 @@ extends Node
 
 static var fish_scene = preload("res://scenes/entities/fish.tscn")
 
-# Name, normal weight
-const PLAICE = ["Plaice", 400, "res://resources/images/fish/fish_plaice_normal.png"]
-
 # example call:
 # var fish = FishGenerator.generate_fish(FishGenerator.PLAICE)
-static func generate_fish(_fish_type: Array) -> Fish:
-	# Setup properties for the fish
-	var species = _fish_type[0]
-	var texture = load(_fish_type[2])
-	var weight = _fish_type[1] * randf_range(0.5, 1.5)
-	
+static func generate_fish(_spawn_area: Vector2, _center_point: Vector2, _fish) -> Fish:
 	# Create and return fish
-	var fish = fish_scene.instantiate()
-	fish.setup(species, texture, weight, [])
+	var fish = _fish.spawn()
+	fish.global_position = get_spawn_point(_spawn_area, _center_point)
 	return fish
+
+static func generate_random_fish(_spawn_area: Vector2, _center_point: Vector2) -> Fish:
+	var all_fish = [Plaice, Cheese, FogNose, BiImp, Lank]
+	return generate_fish(_spawn_area, _center_point, all_fish[randi_range(0, all_fish.size()-1)].new())
+
+static func get_spawn_point(_spawn_area: Vector2, _center_point: Vector2) -> Vector2:
+	var x_min = _center_point.x - (_spawn_area.x/2)
+	var x_max = _center_point.x + (_spawn_area.x/2)
+	
+	var y = _center_point.y
+
+	return Vector2(randf_range(x_min, x_max), y)

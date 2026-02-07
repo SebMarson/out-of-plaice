@@ -9,6 +9,13 @@ var fish_destroyed_today: int = 0
 # User stats
 var player_money: int = 0
 
+# Current level info
+var batch_size: int = 2
+
+# Game info
+var corruption: int = 0
+var corruption_max: int = 100
+
 func _init() -> void:
 	# Setup timer
 	day_timer = Timer.new()
@@ -27,13 +34,31 @@ func start_timer(_wait_time: float):
 	fish_sold_today = 0
 	fish_destroyed_today = 0
 	current_day = current_day + 1
+	
+	# Only do on the first day
+	if current_day == 1:
+		corruption = 0
 
 func _on_timeout() -> void:
 	SignalBus.day_timer_expired.emit()
 
 func _on_fish_sale(fish) -> void:
-	player_money = player_money + 1
+	if not fish.tainted:
+		player_money = player_money + 1
+	else:
+		increase_corruption(10)
 	fish_sold_today = fish_sold_today + 1
 
 func _on_fish_destroy(fish) -> void:
+	if fish.tainted:
+		pass
+	else:
+		pass
 	fish_destroyed_today = fish_destroyed_today + 1
+	
+func increase_corruption(amount: int) -> void:
+	corruption = corruption + amount
+	if corruption >= corruption_max:
+		SignalBus.corruption_peaked.emit()
+	else:
+		SignalBus.corruption_increase.emit()
