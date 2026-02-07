@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://behlo47jvamko"]
+
+[ext_resource type="Script" uid="uid://dy0ivvf33uoef" path="res://scripts/entities/tools/weight_tool.gd" id="1_gur6t"]
+[ext_resource type="Texture2D" uid="uid://cxxcdolyot8s3" path="res://resources/images/tools/placeholder_weighing_scales.png" id="2_3mtda"]
+
+[node name="WeightTool" type="Control" unique_id=1925155566]
+z_index = 2
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gur6t")
+
+[node name="ToolTexture" type="TextureRect" parent="." unique_id=1268269218]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 512.0
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_3mtda")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
