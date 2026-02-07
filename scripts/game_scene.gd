@@ -18,6 +18,10 @@ func _init():
 	SignalBus.destroy_fish.connect(remove_fish)
 
 func _ready() -> void:
+	# Start the music
+	Audio.play_music(Music.sleepy_sailor_1)
+	Audio.play_sfx(SFX.ocean_ambiance)
+	
 	# Link signals
 	SignalBus.spawn_fish.connect(spawn_fish)
 	SignalBus.corruption_peaked.connect(_on_corruption_peaked)

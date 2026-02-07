@@ -73,4 +73,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 text = "Next Day"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=471477297]
+
 [connection signal="pressed" from="MarginContainer/NextDayButton" to="." method="_on_next_day_button_pressed"]

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cjc0f10p37jme"
-path="res://.godot/imported/BOOKOS.TTF-c5f7d0ce018a794d96521eb4159201ef.fontdata"
+path="res://.godot/imported/BOOKOS.TTF-1542520d113ebea4f1e906cd1f6d2012.fontdata"
 
 [deps]
 
-source_file="res://resources/Fonts/BOOKOS.TTF"
-dest_files=["res://.godot/imported/BOOKOS.TTF-c5f7d0ce018a794d96521eb4159201ef.fontdata"]
+source_file="res://resources/fonts/BOOKOS.TTF"
+dest_files=["res://.godot/imported/BOOKOS.TTF-1542520d113ebea4f1e906cd1f6d2012.fontdata"]
 
 [params]
 

@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://her3eaouui8f"]
+
+[ext_resource type="Script" uid="uid://doibnqfeg5kpc" path="res://scripts/menus/fullscreen_checkbox.gd" id="1_7i3iu"]
+[ext_resource type="Script" uid="uid://c25f3bqwcs2eg" path="res://scenes/menus/settings_menu.gd" id="1_da10i"]
+[ext_resource type="Script" uid="uid://dhc401bk26qjw" path="res://scripts/menus/volume_slider.gd" id="1_hayap"]
+[ext_resource type="Script" uid="uid://cxvrqud270x5c" path="res://scripts/menus/music_volume.gd" id="3_ojvp1"]
+[ext_resource type="Script" uid="uid://t0okgkbf3xwo" path="res://scripts/menus/sfx_volume.gd" id="4_da10i"]
+
+[node name="SettingMenu" type="Control" unique_id=324155110]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_da10i")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=241435459]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.5
+offset_top = -20.0
+offset_right = 59.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UISettingCheckbox" type="VBoxContainer" parent="CenterContainer" unique_id=1156378094]
+layout_mode = 2
+alignment = 1
+
+[node name="fullscreen_checkbox" type="CheckBox" parent="CenterContainer/UISettingCheckbox" unique_id=287543817]
+layout_mode = 2
+text = "Fullscreen"
+script = ExtResource("1_7i3iu")
+
+[node name="volumeslider_label" type="Label" parent="CenterContainer/UISettingCheckbox" unique_id=2116067875]
+layout_mode = 2
+text = "Master volume slider"
+
+[node name="master_volume" type="HSlider" parent="CenterContainer/UISettingCheckbox" unique_id=1499619204]
+self_modulate = Color(0.12941177, 0, 0.2784314, 1)
+layout_mode = 2
+tooltip_text = "Volume slider"
+max_value = 1.0
+step = 0.05
+script = ExtResource("1_hayap")
+
+[node name="volumeslider_label2" type="Label" parent="CenterContainer/UISettingCheckbox" unique_id=31299800]
+layout_mode = 2
+text = "Background music volume slider"
+
+[node name="music_volume" type="HSlider" parent="CenterContainer/UISettingCheckbox" unique_id=1204330979]
+self_modulate = Color(0.9188135, 0, 0.2187736, 1)
+layout_mode = 2
+tooltip_text = "Volume slider"
+max_value = 1.0
+step = 0.05
+script = ExtResource("3_ojvp1")
+
+[node name="volumeslider_label3" type="Label" parent="CenterContainer/UISettingCheckbox" unique_id=848954365]
+layout_mode = 2
+text = "SFXs volume slider"
+
+[node name="sfx_volume" type="HSlider" parent="CenterContainer/UISettingCheckbox" unique_id=826811138]
+self_modulate = Color(0.06406259, 0.27373576, 0.10894614, 1)
+layout_mode = 2
+tooltip_text = "Volume slider"
+max_value = 1.0
+step = 0.05
+script = ExtResource("4_da10i")
+
+[node name="back" type="Button" parent="CenterContainer/UISettingCheckbox" unique_id=653618007]
+layout_mode = 2
+text = "Back"
+
+[connection signal="toggled" from="CenterContainer/UISettingCheckbox/fullscreen_checkbox" to="." method="_on_toggled"]
+[connection signal="mouse_exited" from="CenterContainer/UISettingCheckbox/master_volume" to="CenterContainer/UISettingCheckbox/master_volume" method="release_focus"]
+[connection signal="value_changed" from="CenterContainer/UISettingCheckbox/master_volume" to="CenterContainer/UISettingCheckbox/master_volume" method="_on_value_changed"]
+[connection signal="mouse_exited" from="CenterContainer/UISettingCheckbox/music_volume" to="CenterContainer/UISettingCheckbox/music_volume" method="release_focus"]
+[connection signal="value_changed" from="CenterContainer/UISettingCheckbox/music_volume" to="CenterContainer/UISettingCheckbox/music_volume" method="_on_value_changed"]
+[connection signal="mouse_exited" from="CenterContainer/UISettingCheckbox/sfx_volume" to="CenterContainer/UISettingCheckbox/sfx_volume" method="release_focus"]
+[connection signal="value_changed" from="CenterContainer/UISettingCheckbox/sfx_volume" to="CenterContainer/UISettingCheckbox/sfx_volume" method="_on_value_changed"]
+[connection signal="pressed" from="CenterContainer/UISettingCheckbox/back" to="." method="_on_back_pressed"]

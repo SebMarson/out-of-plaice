@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ctblr7v0r675s"
-path="res://.godot/imported/BOOKOSBI.TTF-77d964440c1e11e59904a78c6effe620.fontdata"
+path="res://.godot/imported/BOOKOSBI.TTF-ea10a6ffeb4935c4d3ee7790d18d733e.fontdata"
 
 [deps]
 
-source_file="res://resources/Fonts/BOOKOSBI.TTF"
-dest_files=["res://.godot/imported/BOOKOSBI.TTF-77d964440c1e11e59904a78c6effe620.fontdata"]
+source_file="res://resources/fonts/BOOKOSBI.TTF"
+dest_files=["res://.godot/imported/BOOKOSBI.TTF-ea10a6ffeb4935c4d3ee7790d18d733e.fontdata"]
 
 [params]
 
