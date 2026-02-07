@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://her3eaouui8f"]
+
+[ext_resource type="Script" uid="uid://doibnqfeg5kpc" path="res://scripts/menus/fullscreen_checkbox.gd" id="1_7i3iu"]
+[ext_resource type="Script" uid="uid://dhc401bk26qjw" path="res://scripts/menus/volume_slider.gd" id="1_hayap"]
+
+[node name="SettingMenu" type="Control" unique_id=324155110]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=241435459]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.5
+offset_top = -20.0
+offset_right = 59.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UISettingCheckbox" type="VBoxContainer" parent="CenterContainer" unique_id=1156378094]
+layout_mode = 2
+alignment = 1
+
+[node name="fullscreen_checkbox" type="CheckBox" parent="CenterContainer/UISettingCheckbox" unique_id=287543817]
+layout_mode = 2
+text = "Fullscreen"
+script = ExtResource("1_7i3iu")
+
+[node name="volumeslider_label" type="Label" parent="CenterContainer/UISettingCheckbox" unique_id=2116067875]
+layout_mode = 2
+text = "Volume slider"
+
+[node name="volume_slider" type="HSlider" parent="CenterContainer/UISettingCheckbox" unique_id=1499619204]
+self_modulate = Color(0.12941177, 0, 0.2784314, 1)
+layout_mode = 2
+tooltip_text = "Volume slider"
+step = 0.05
+script = ExtResource("1_hayap")
+
+[connection signal="toggled" from="CenterContainer/UISettingCheckbox/fullscreen_checkbox" to="CenterContainer/UISettingCheckbox/fullscreen_checkbox" method="_on_toggled"]
+[connection signal="mouse_exited" from="CenterContainer/UISettingCheckbox/volume_slider" to="CenterContainer/UISettingCheckbox/volume_slider" method="release_focus"]
+[connection signal="value_changed" from="CenterContainer/UISettingCheckbox/volume_slider" to="CenterContainer/UISettingCheckbox/volume_slider" method="_on_value_changed"]
