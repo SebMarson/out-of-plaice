@@ -80,10 +80,9 @@ const reference_book_page_five_value: String = "Medium"
 const reference_book_page_five_rarity: String = "Common"
 const reference_book_page_five_glow: String = "Should not glow"
 
-<<<<<<< Updated upstream
 # Failure text coruption
 const failure_text_coruption: String = "You have allowed too many 'bad' fish to be eaten. /n The local community has become too corrupted. /n You no longer have any business. /n Just the sound of the ocean. /n And the horrors within. /n "
-=======
+
 #Pages for tools
 const reference_book_page_six_title: String = "Tools"
 const reference_book_page_six_text: String = "Knowing your good fish from your bad fish is as easy as knowing what tools to use:"
@@ -103,4 +102,3 @@ const reference_book_page_ten_text: String = "Your gut is a tool. Trust it. \nTa
 #Lick has been removed
 #const reference_book_page_eleven_title: String = "Lick"
 #const reference_book_page_elven_text: String = "Absolutely useless. Don't bother. Unless you like the taste of raw fish."
->>>>>>> Stashed changes
