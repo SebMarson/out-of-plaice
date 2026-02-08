@@ -9,7 +9,6 @@ var sfx_playback: AudioStreamPlaybackPolyphonic
 # ready function - to make them exists (as ready)
 func _ready() -> void:
 	music_player = AudioStreamPlayer.new()
-#	music_player.volume_db = 0.3
 	music_player.bus = "music"
 	add_child(music_player)
 	sfx_player = AudioStreamPlayer.new()
@@ -17,7 +16,6 @@ func _ready() -> void:
 	sfx_stream.polyphony = 10
 	sfx_player.stream = sfx_stream
 	sfx_player.bus = "sfx"
-#	sfx_player.volume_db = 0.3
 	add_child(sfx_player)
 
 # function to play music and check if already playing
