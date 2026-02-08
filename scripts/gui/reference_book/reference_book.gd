@@ -2,7 +2,7 @@ extends Node2D
 
 # Internal variables
 var current_page: int = 0
-var max_page: int = 5
+var available_pages = []
 
 @onready var page_sprite = $PageSprite
 @onready var title_text = $TitleText
@@ -22,6 +22,11 @@ var max_page: int = 5
 @onready var value_label = $FishPageChildren/GridContainer/ValueLabel
 @onready var rarity_label = $FishPageChildren/GridContainer/RarityLabel
 @onready var glow_label = $FishPageChildren/GlowLabel
+
+# Tool page children
+@onready var tool_page_children = $ToolPageChildren
+@onready var tool_sprite = $ToolPageChildren/ToolSprite
+@onready var tool_desc_label = $ToolPageChildren/ToolDescLabel
 
 # Object params
 @export var hovering: bool
@@ -45,8 +50,7 @@ func _ready() -> void:
 	height = page_sprite.get_rect().size.y
 	
 	# Child setup
-	switch_page_layout(0)
-	update_full_page("zero")
+	SignalBus.set_available_pages.connect(_on_reference_page_load)
 	page_text.add_theme_color_override("font_color", Color.BLACK)
 
 func _input(event: InputEvent) -> void:
@@ -60,74 +64,69 @@ func _process(_delta) -> void:
 	if dragging:
 		global_position = get_global_mouse_position()# - Vector2(width, height)
 
-func reload_page():
-	match current_page:
-		0:
-			switch_page_layout(0)
-			update_full_page("zero")
-		1:
-			switch_page_layout(1)
-			update_fish_page("one")
-		2:
-			switch_page_layout(1)
-			update_fish_page("two")
-		3:
-			switch_page_layout(1)
-			update_fish_page("three")
-		4:
-			switch_page_layout(1)
-			update_fish_page("four")
-		5:
-			switch_page_layout(1)
-			update_fish_page("five")
+func _on_reference_page_load(_available_pages) -> void:
+	available_pages = _available_pages
+	reload_page(available_pages[0])
+
+func reload_page(reference_book_page: ReferenceBookPage):
+	switch_page_layout(reference_book_page)
+	if reference_book_page.page_layout == 0:
+		update_full_page(reference_book_page)
+	elif reference_book_page.page_layout == 1:
+		update_fish_page(reference_book_page)
+	elif reference_book_page.page_layout == 2:
+		update_tool_page(reference_book_page)
 
 func _on_next_page_button_pressed() -> void:
-	if current_page + 1 <= max_page:
+	if current_page + 1 < available_pages.size():
 		current_page = current_page + 1
-		reload_page()
+		reload_page(available_pages[current_page])
 
 func _on_prev_page_button_pressed() -> void:
 	if current_page - 1 >= 0:
 		current_page = current_page - 1
-		reload_page()
+		reload_page(available_pages[current_page])
 
 func _on_close_button_pressed() -> void:
 	visible = false
 
 # 0 shows full page layout, 1 shows fish page layout
-func switch_page_layout(_value: int) -> void:
-	if _value == 0:
+func switch_page_layout(reference_page: ReferenceBookPage) -> void:
+	if reference_page.page_layout == 0:
 		full_page_chlidren.visible = true
 		fish_page_children.visible = false
-	if _value == 1:
+		tool_page_children.visible = false
+	elif reference_page.page_layout == 1:
 		full_page_chlidren.visible = false
 		fish_page_children.visible = true
-	
-func update_full_page(index: String) -> void:
-	if "reference_book_page_" + index + "_title" in TextRepo:
-		title_text.text = TextRepo.get("reference_book_page_" + index + "_title")
-		page_text.text = TextRepo.get("reference_book_page_" + index + "_text")
-	else:
-		print("No reference page for index: " + index)
-		title_text.text = "Loris"
-		page_text.text = "Lepsum, something went wrong..."
+		tool_page_children.visible = false
+	elif reference_page.page_layout == 2:
+		full_page_chlidren.visible = false
+		fish_page_children.visible = false
+		tool_page_children.visible = true
 
-func update_fish_page(index: String) -> void:
-	if "reference_book_page_" + index + "_title" in TextRepo:
-		title_text.text = TextRepo.get("reference_book_page_" + index + "_title")
-		fish_sprite.texture = load(TextRepo.get("reference_book_page_" + index + "_fish_texture"))
-		fish_desc_label.text = TextRepo.get("reference_book_page_" + index + "_desc")
-		weight_label.text = weight_template % TextRepo.get("reference_book_page_" + index + "_weight")
-		parasites_label.text = parasites_template % TextRepo.get("reference_book_page_" + index + "_parasites")
-		aura_label.text = aura_template % TextRepo.get("reference_book_page_" + index + "_aura")
-		value_label.text = value_template % TextRepo.get("reference_book_page_" + index + "_value")
-		rarity_label.text = rarity_template % TextRepo.get("reference_book_page_" + index + "_rarity")
-		glow_label.text = TextRepo.get("reference_book_page_" + index + "_glow")
-	else:
-		print("No reference page for index: " + index)
-		title_text.text = "Loris"
-		page_text.text = "Lepsum, something went wrong..."
+func update_full_page(reference_book_page: ReferenceBookPage) -> void:
+	title_text.text = reference_book_page.title_text
+	page_text.text = reference_book_page.page_body_text
 
+func update_fish_page(reference_book_page: ReferenceBookPage) -> void:
+	title_text.text = reference_book_page.fish.species
+	fish_sprite.texture =  reference_book_page.fish.texture_normal
+	fish_desc_label.text = reference_book_page.fish.fish_description
+	weight_label.text = "Weight: %dg - %dg" % [reference_book_page.fish.weight_min, reference_book_page.fish.weight_max]
+	parasites_label.text = "Parasites: %s" % str(reference_book_page.fish.parasites)
+	aura_label.text = "Aura: %s" % reference_book_page.fish.aura
+	value_label.text = "Value: %s" % reference_book_page.fish.value
+	rarity_label.text = "Rarity: %s" % reference_book_page.fish.rarity
+	if reference_book_page.fish.glow:
+		glow_label.text = "Should glow"
+	else:
+		glow_label.text = "Should not glow"
+
+func update_tool_page(reference_book_page: ReferenceBookPage) -> void:
+	title_text.text = reference_book_page.title_text
+	tool_sprite.texture = reference_book_page.tool_texture
+	tool_desc_label.text = reference_book_page.tool_description
 
 func _on_draggable_area_mouse_entered() -> void:
 	hovering = true

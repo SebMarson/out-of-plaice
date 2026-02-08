@@ -2,6 +2,7 @@ extends Node
 
 # Information about the day
 var current_day: int = 0
+var loaded_day: DayLevel
 var day_timer: Timer
 var fish_sold_today: int = 0
 var fish_destroyed_today: int = 0
@@ -37,12 +38,12 @@ func start_timer(_wait_time: float):
 	fish_sold_today = 0
 	fish_destroyed_today = 0
 	current_day = current_day + 1
+	loaded_day = LevelDefinitions.levels[current_day-1]
+	SignalBus.set_available_pages.emit(loaded_day.available_reference_pages)
 	
 	# Only do on the first day
 	if current_day == 1:
 		corruption = 0
-
-
 
 func _on_timeout() -> void:
 	Audio.play_sfx(SFX.fog_horn)

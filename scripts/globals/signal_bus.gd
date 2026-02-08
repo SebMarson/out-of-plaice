@@ -20,3 +20,6 @@ signal pause_start()
 signal pause_stop()
 signal corruption_increase()
 signal corruption_peaked()
+
+# Reference book signals
+signal set_available_pages(available_pages)

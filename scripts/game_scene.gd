@@ -53,10 +53,7 @@ func _ready() -> void:
 	right_shape.global_position = Vector2(get_viewport_rect().size.x, get_viewport_rect().size.y/2)
 	bottom_shape.global_position = Vector2(get_viewport_rect().size.x/2, get_viewport_rect().size.y)
 	
-	#water_sprite_1.scale = Vector2(1.2*get_viewport_rect().size.x/1000, 1.2*get_viewport_rect().size.y/1000)
 	water_sprite_1.play()
-	#water_sprite_2.scale = Vector2(1.2*get_viewport_rect().size.x/1000, 1.2*get_viewport_rect().size.y/1000)
-	#water_sprite_2.global_position = Vector2()
 	water_sprite_2.play()
 	
 	# Start game

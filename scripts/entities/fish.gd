@@ -6,6 +6,7 @@ extends RigidBody2D
 @export var species: String # Different species have a different index type
 @export var texture_normal: Resource = preload("res://resources/images/fish/fish_plaice_normal.png")
 @export var scene: Resource = preload("res://scenes/entities/fish.tscn")
+@export var fish_description: String
 
 # Fish health stats
 @export var weight_min: int = 350

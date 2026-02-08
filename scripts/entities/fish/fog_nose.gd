@@ -3,10 +3,11 @@ class_name FogNose
 extends Fish
 
 # Normal health stats
-func spawn() -> Fish:
+func spawn(force_healthy: bool = false) -> Fish:
 	var new_plaice = scene.instantiate()
 	new_plaice.species = "Fog Nose"
 	new_plaice.texture_normal = preload("res://resources/images/fish/fish_fog_nose_normal.png")
+	new_plaice.fish_description = TextRepo.fish_fog_nose_description
 	
 	# Normal health stats
 	new_plaice.weight_min = 1
@@ -18,6 +19,7 @@ func spawn() -> Fish:
 	new_plaice.glow = true
 	
 	# Taint it, maybe
-	randomize_fish(new_plaice)
+	if not force_healthy:
+		randomize_fish(new_plaice)
 	
 	return new_plaice

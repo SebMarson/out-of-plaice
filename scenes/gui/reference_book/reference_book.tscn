@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cvvaphy8d67ys" path="res://resources/images/gui/reference_book/next_page_placeholder.png" id="3_am5yk"]
 [ext_resource type="Texture2D" uid="uid://6kf8ujccrot8" path="res://resources/images/fish/fish_plaice_normal.png" id="3_vt62c"]
 [ext_resource type="Texture2D" uid="uid://n54v7va5gsxl" path="res://resources/images/gui/reference_book/close_book_placeholder.png" id="4_ia8xe"]
+[ext_resource type="Texture2D" uid="uid://dw8osfd515s03" path="res://resources/images/tools/tool_aura.png" id="4_vt62c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_am5yk"]
 size = Vector2(303, 333)
@@ -122,6 +123,27 @@ offset_right = 59.0
 offset_bottom = 127.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Should not glow"
+
+[node name="ToolPageChildren" type="Control" parent="." unique_id=1481578718]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ToolSprite" type="Sprite2D" parent="ToolPageChildren" unique_id=837394842]
+position = Vector2(-10.000015, -118)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_vt62c")
+
+[node name="ToolDescLabel" type="Label" parent="ToolPageChildren" unique_id=1742329955]
+layout_mode = 0
+offset_left = -157.0
+offset_top = -54.0
+offset_right = 159.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 3
 
 [node name="NextPageButton" type="TextureButton" parent="." unique_id=2030013052]
 offset_left = 100.0
