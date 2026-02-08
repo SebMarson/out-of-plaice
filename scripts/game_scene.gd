@@ -11,6 +11,8 @@ var bins = []
 @onready var bottom_shape = $AreaBoundaries/BottomShape
 @onready var gui = $GUI
 @onready var spawn_shape = $SpawnArea/SpawnShape
+@onready var water_sprite_1: AnimatedSprite2D = $WaterSprite
+@onready var water_sprite_2: AnimatedSprite2D = $WaterSprite2
 
 func _init():
 	SignalBus.day_timer_expired.connect(_on_day_timeout)
@@ -42,6 +44,9 @@ func _ready() -> void:
 	
 	# Adjust spawn area
 	spawn_shape.global_position = (get_viewport_rect().size / 2)
+	
+	water_sprite_1.play()
+	water_sprite_2.play()
 	
 	# Start game
 	SignalBus.day_timer_start.emit(25)
