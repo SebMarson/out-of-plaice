@@ -1,6 +1,7 @@
 extends Control
 
 # Labels
+@onready var day_value_label = $ElementsContainer/TopContainer/TopRightContainer/HBoxContainer/DayValueLabel
 @onready var sold_value_label = $ElementsContainer/TopContainer/TopRightContainer/HBoxContainer/SoldValueLabel
 @onready var destroyed_value_label = $ElementsContainer/TopContainer/TopRightContainer/HBoxContainer/DestroyedValueLabel
 
@@ -36,6 +37,7 @@ func _ready() -> void:
 	
 # Not a very efficient way to handle this, lots of unnecessary calls... but quick to write! Fix later for self respect.
 func _process(_delta) -> void:
+	day_value_label.text = str(GameState.current_day)
 	sold_value_label.text = str(GameState.fish_sold_today)
 	destroyed_value_label.text = str(GameState.fish_destroyed_today)
 

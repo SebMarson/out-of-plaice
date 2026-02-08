@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://qh5ipht3cg47" path="res://scripts/gui/gui.gd" id="1_q21vd"]
 [ext_resource type="PackedScene" uid="uid://blfkit4v8y4xv" path="res://scenes/gui/debug_menu.tscn" id="2_x2qsw"]
 [ext_resource type="Texture2D" uid="uid://db4n7tceicujp" path="res://resources/images/book/book_front.png" id="3_6qyx7"]
+[ext_resource type="Texture2D" uid="uid://dc05o8i0i6uh0" path="res://resources/images/gui/gui_statsbar.png" id="3_7x5n5"]
 [ext_resource type="PackedScene" uid="uid://c4kn82qomfy57" path="res://scenes/entities/tools/weight_tool.tscn" id="5_ort37"]
 [ext_resource type="PackedScene" uid="uid://ce6q3y71l7n2p" path="res://scenes/entities/tools/lens_tool.tscn" id="6_gv5p5"]
 [ext_resource type="PackedScene" uid="uid://dred0rfo3r272" path="res://scenes/entities/tools/aura_tool.tscn" id="7_6qyx7"]
@@ -29,6 +30,22 @@ position = Vector2(639.75, 360.75)
 scale = Vector2(0.501, 0.5)
 texture = ExtResource("11_453fe")
 
+[node name="Container" type="CenterContainer" parent="." unique_id=572625614]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Container" unique_id=213778215]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Container/MarginContainer" unique_id=2099448456]
+position = Vector2(1.25, -0.75)
+scale = Vector2(0.5, 0.50138795)
+texture = ExtResource("3_7x5n5")
+
 [node name="ElementsContainer" type="VBoxContainer" parent="." unique_id=1068590774]
 layout_mode = 1
 anchors_preset = 15
@@ -48,17 +65,25 @@ size_flags_horizontal = 0
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 0
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 60
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ElementsContainer/TopContainer/TopRightContainer" unique_id=981450799]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
+[node name="DayLabel" type="Label" parent="ElementsContainer/TopContainer/TopRightContainer/HBoxContainer" unique_id=404024402]
+layout_mode = 2
+text = "Day: "
+
+[node name="DayValueLabel" type="Label" parent="ElementsContainer/TopContainer/TopRightContainer/HBoxContainer" unique_id=1446723011]
+layout_mode = 2
+text = "0"
+
 [node name="SoldLabel" type="Label" parent="ElementsContainer/TopContainer/TopRightContainer/HBoxContainer" unique_id=904898601]
 layout_mode = 2
-text = "Sold: "
+text = "    Sold: "
 
 [node name="SoldValueLabel" type="Label" parent="ElementsContainer/TopContainer/TopRightContainer/HBoxContainer" unique_id=606398749]
 layout_mode = 2
@@ -66,7 +91,7 @@ text = "0"
 
 [node name="DestroyedLabel" type="Label" parent="ElementsContainer/TopContainer/TopRightContainer/HBoxContainer" unique_id=1456310443]
 layout_mode = 2
-text = "Destroyed: "
+text = "    Destroyed: "
 
 [node name="DestroyedValueLabel" type="Label" parent="ElementsContainer/TopContainer/TopRightContainer/HBoxContainer" unique_id=720516541]
 layout_mode = 2
@@ -127,6 +152,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1431696419]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
