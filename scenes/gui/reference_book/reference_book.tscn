@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://p53g28rrdfcl"]
 
 [ext_resource type="Script" uid="uid://b6yaork5eiufu" path="res://scripts/gui/reference_book/reference_book.gd" id="1_tcxm7"]
-[ext_resource type="Texture2D" uid="uid://uxf6gsceatts" path="res://resources/images/gui/reference_book/page_placeholder.png" id="2_ia8xe"]
+[ext_resource type="Texture2D" uid="uid://ce1w4hf3hmxhm" path="res://resources/images/book/book_page.png" id="2_am5yk"]
 [ext_resource type="Texture2D" uid="uid://cvvaphy8d67ys" path="res://resources/images/gui/reference_book/next_page_placeholder.png" id="3_am5yk"]
 [ext_resource type="Texture2D" uid="uid://6kf8ujccrot8" path="res://resources/images/fish/fish_plaice_normal.png" id="3_vt62c"]
 [ext_resource type="Texture2D" uid="uid://n54v7va5gsxl" path="res://resources/images/gui/reference_book/close_book_placeholder.png" id="4_ia8xe"]
@@ -10,14 +10,14 @@
 script = ExtResource("1_tcxm7")
 
 [node name="PageSprite" type="Sprite2D" parent="." unique_id=215531382]
-scale = Vector2(5, 5)
-texture = ExtResource("2_ia8xe")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_am5yk")
 
 [node name="TitleText" type="Label" parent="." unique_id=1350820152]
 offset_left = -149.0
-offset_top = -174.0
+offset_top = -210.0
 offset_right = 144.0
-offset_bottom = -139.0
+offset_bottom = -175.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "Lorem"
@@ -47,16 +47,16 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="FishSprite" type="Sprite2D" parent="FishPageChildren" unique_id=1305495542]
-position = Vector2(-99.99999, -67.99999)
+position = Vector2(-102, -101)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_vt62c")
 
 [node name="FishDescLabel" type="Label" parent="FishPageChildren" unique_id=1142740254]
 layout_mode = 0
-offset_left = -33.0
-offset_top = -124.0
-offset_right = 161.0
-offset_bottom = -29.0
+offset_left = -34.0
+offset_top = -171.0
+offset_right = 160.0
+offset_bottom = -46.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 12
 text = "Loreli"
@@ -64,19 +64,19 @@ autowrap_mode = 3
 
 [node name="HealthyTitleLabel" type="Label" parent="FishPageChildren" unique_id=1056280548]
 layout_mode = 0
-offset_left = -60.0
-offset_top = -26.0
-offset_right = 62.0
-offset_bottom = -3.0
+offset_left = -59.0
+offset_top = -39.0
+offset_right = 63.0
+offset_bottom = -16.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Healthy Stats"
 
 [node name="GridContainer" type="GridContainer" parent="FishPageChildren" unique_id=778315550]
 layout_mode = 0
-offset_left = -157.0
-offset_top = 21.0
-offset_right = 158.0
-offset_bottom = 98.0
+offset_left = -150.0
+offset_top = 6.0
+offset_right = 165.0
+offset_bottom = 83.0
 columns = 2
 
 [node name="WeightLabel" type="Label" parent="FishPageChildren/GridContainer" unique_id=1456412274]
@@ -106,10 +106,10 @@ text = "Rarity: Common"
 
 [node name="GlowLabel" type="Label" parent="FishPageChildren" unique_id=2070996266]
 layout_mode = 0
-offset_left = -63.0
-offset_top = 109.0
-offset_right = 62.0
-offset_bottom = 132.0
+offset_left = -66.0
+offset_top = 104.0
+offset_right = 59.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Should not glow"
 
@@ -129,10 +129,10 @@ texture_normal = ExtResource("3_am5yk")
 flip_h = true
 
 [node name="CloseButton" type="TextureButton" parent="." unique_id=2140146494]
-offset_left = 134.0
-offset_top = -182.0
-offset_right = 204.0
-offset_bottom = -107.0
+offset_left = 125.0
+offset_top = -209.0
+offset_right = 195.0
+offset_bottom = -134.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("4_ia8xe")
 
