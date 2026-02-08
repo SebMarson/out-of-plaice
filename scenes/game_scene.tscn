@@ -255,7 +255,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5aja"]
-size = Vector2(1331, 188)
+size = Vector2(1331, 223)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onqr8"]
 size = Vector2(96, 706.5)
@@ -276,13 +276,13 @@ script = ExtResource("1_w5aja")
 position = Vector2(292.49997, 260)
 scale = Vector2(1.158203, 1)
 sprite_frames = SubResource("SpriteFrames_6h3me")
-frame_progress = 0.24184255
+frame_progress = 0.040330667
 
 [node name="WaterSprite2" type="AnimatedSprite2D" parent="." unique_id=1797450590]
 position = Vector2(882.00006, 260)
 scale = Vector2(1.1445311, 1)
 sprite_frames = SubResource("SpriteFrames_6h3me")
-frame_progress = 0.88460964
+frame_progress = 0.6830976
 
 [node name="BackgroundSprite" type="Sprite2D" parent="." unique_id=218776990]
 position = Vector2(582, 327.49997)
@@ -299,7 +299,7 @@ texture = ExtResource("4_bw6k5")
 [node name="AreaBoundaries" type="StaticBody2D" parent="." unique_id=1850232620]
 
 [node name="BottomShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=1682673169]
-position = Vector2(646, 637)
+position = Vector2(646, 619.5)
 shape = SubResource("RectangleShape2D_w5aja")
 
 [node name="LeftShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=613815301]
