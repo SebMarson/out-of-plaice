@@ -11,7 +11,7 @@ extends RigidBody2D
 @export var weight_min: int = 350
 @export var weight_max: int = 450
 @export var weight: int = 0
-@export var parasites: bool = false
+@export var parasites = Mouth.NO_PARASITE
 @export var aura = Aura.FISHY
 @export var value = Value.LOW
 @export var rarity = Rarity.COMMON
