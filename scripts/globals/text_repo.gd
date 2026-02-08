@@ -56,3 +56,6 @@ const reference_book_page_five_aura: String = "Intense"
 const reference_book_page_five_value: String = "Medium"
 const reference_book_page_five_rarity: String = "Common"
 const reference_book_page_five_glow: String = "Should not glow"
+
+# Failure text coruption
+const failure_text_coruption: String = "You have allowed too many 'bad' fish to be eaten. /n The local community has become too corrupted. /n You no longer have any business. /n Just the sound of the ocean. /n And the horrors within. /n "

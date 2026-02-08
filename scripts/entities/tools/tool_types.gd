@@ -3,3 +3,4 @@ extends Node
 
 const AURA: String = "Aura"
 const WEIGHT: String = "WEIGHT"
+const MOUTH: String = "Mouth"

@@ -85,7 +85,7 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 8
 
-[node name="AuraTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1925155566 instance=ExtResource("7_6qyx7")]
+[node name="AuraTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=393892102 instance=ExtResource("7_6qyx7")]
 layout_mode = 2
 
 [node name="WeightTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1825591970 instance=ExtResource("5_ort37")]
@@ -94,7 +94,7 @@ layout_mode = 2
 [node name="LensTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1809914959 instance=ExtResource("6_gv5p5")]
 layout_mode = 2
 
-[node name="LickTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=707313709 instance=ExtResource("7_453fe")]
+[node name="MouthTool2" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1925155566 instance=ExtResource("4_6qyx7")]
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="ElementsContainer/BottomContainer/HBoxContainer" unique_id=204690578]
