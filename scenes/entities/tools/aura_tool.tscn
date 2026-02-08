@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dred0rfo3r272"]
 
 [ext_resource type="Script" uid="uid://d2d1l6uw8bsf5" path="res://scripts/entities/tools/aura_tool.gd" id="1_3ela5"]
-[ext_resource type="Texture2D" uid="uid://clvm1p6adr5w4" path="res://resources/images/tools/placeholder_check_aura.png" id="1_s761u"]
+[ext_resource type="Texture2D" uid="uid://dw8osfd515s03" path="res://resources/images/tools/tool_aura.png" id="2_3ela5"]
 
 [node name="AuraTool" type="Control" unique_id=1925155566]
 z_index = 2
@@ -14,7 +14,7 @@ layout_mode = 0
 offset_right = 512.0
 offset_bottom = 512.0
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("1_s761u")
+texture = ExtResource("2_3ela5")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -8,9 +8,18 @@ var fish = []
 var bins = []
 
 # Children
-@onready var bottom_shape = $AreaBoundaries/BottomShape
 @onready var gui = $GUI
 @onready var spawn_shape = $SpawnArea/SpawnShape
+
+@onready var water_sprite_1: AnimatedSprite2D = $WaterSprite
+@onready var water_sprite_2: AnimatedSprite2D = $WaterSprite2
+@onready var background_sprite = $BackgroundSprite
+@onready var table_sprite = $TableSprite
+
+@onready var top_shape = $AreaBoundaries/TopShape
+@onready var bottom_shape = $AreaBoundaries/BottomShape
+@onready var left_shape = $AreaBoundaries/LeftShape
+@onready var right_shape = $AreaBoundaries/RightShape
 
 func _init():
 	SignalBus.day_timer_expired.connect(_on_day_timeout)
@@ -29,19 +38,26 @@ func _ready() -> void:
 	
 	# Generate bins for the scene
 	var new_bin = bin_scene.instantiate()
-	new_bin.global_position = Vector2(150, 500)
+	new_bin.global_position = Vector2(get_viewport_rect().size.x/9, 350)
 	new_bin.state = 1
 	bins.append(new_bin)
 	add_child(new_bin)
 	
 	var second_bin = bin_scene.instantiate()
-	second_bin.global_position = Vector2(1100, 500)
+	second_bin.global_position = Vector2((get_viewport_rect().size.x/10)*8.5, 375)
 	second_bin.state = 2
 	bins.append(second_bin)
 	add_child(second_bin)
 	
-	# Adjust spawn area
-	spawn_shape.global_position = (get_viewport_rect().size / 2)
+	# Adjust positions and scales
+	right_shape.global_position = Vector2(get_viewport_rect().size.x, get_viewport_rect().size.y/2)
+	bottom_shape.global_position = Vector2(get_viewport_rect().size.x/2, get_viewport_rect().size.y)
+	
+	#water_sprite_1.scale = Vector2(1.2*get_viewport_rect().size.x/1000, 1.2*get_viewport_rect().size.y/1000)
+	water_sprite_1.play()
+	#water_sprite_2.scale = Vector2(1.2*get_viewport_rect().size.x/1000, 1.2*get_viewport_rect().size.y/1000)
+	#water_sprite_2.global_position = Vector2()
+	water_sprite_2.play()
 	
 	# Start game
 	SignalBus.day_timer_start.emit(25)
@@ -63,7 +79,10 @@ func remove_fish(_fish) -> void:
 	fish.remove_at(fish.find(_fish))
 	
 func _on_day_timeout():
-	get_tree().change_scene_to_file("res://scenes/menus/end_day_scene.tscn")
+	if GameState.days_in_run == GameState.current_day:
+		get_tree().change_scene_to_file("res://scenes/menus/final_day_scene.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/menus/end_day_scene.tscn")
 
 func _on_corruption_peaked() -> void:
 	get_tree().change_scene_to_file("res://scenes/menus/fail_scene.tscn")

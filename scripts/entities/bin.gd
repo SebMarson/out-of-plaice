@@ -16,7 +16,9 @@ func setup(_state: int):
 	state = _state
 
 func _on_area_entered(area: Area2D) -> void:
-	apply_state(area)
+	if area.get_parent() is Fish:
+		Audio.play_random_sfx(SFX.smack_group)
+		apply_state(area)
 
 func apply_state(area: Area2D):
 	area.get_parent().change_state(state)

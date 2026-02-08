@@ -65,6 +65,30 @@ text = "Corruption ++"
 layout_mode = 2
 text = "Corruption --"
 
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer" unique_id=1750174940]
+layout_mode = 2
+
+[node name="CurrentDayLabel" type="Label" parent="VBoxContainer/HBoxContainer6" unique_id=1085610943]
+layout_mode = 2
+text = "Current Day: "
+
+[node name="CurrentDayValueLabel" type="Label" parent="VBoxContainer/HBoxContainer6" unique_id=1411615990]
+layout_mode = 2
+text = "0"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer" unique_id=731044664]
+layout_mode = 2
+
+[node name="CurrentDayDecButton" type="Button" parent="VBoxContainer/HBoxContainer7" unique_id=818952662]
+layout_mode = 2
+text = "Day --"
+
+[node name="CurrentDayIncButton" type="Button" parent="VBoxContainer/HBoxContainer7" unique_id=1412715496]
+layout_mode = 2
+text = "Day ++"
+
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/SpawnFishButton" to="." method="_on_spawn_fish_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer5/CorruptionUpButton" to="." method="_on_corruption_up_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer5/CorruptionDownButton" to="." method="_on_corruption_down_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer7/CurrentDayDecButton" to="." method="_on_current_day_dec_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer7/CurrentDayIncButton" to="." method="_on_current_day_inc_button_pressed"]

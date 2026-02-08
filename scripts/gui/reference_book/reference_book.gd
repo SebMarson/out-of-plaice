@@ -23,6 +23,12 @@ var max_page: int = 5
 @onready var rarity_label = $FishPageChildren/GridContainer/RarityLabel
 @onready var glow_label = $FishPageChildren/GlowLabel
 
+# Object params
+@export var hovering: bool
+@export var dragging: bool
+@onready var width
+@onready var height
+
 # Text templates
 var weight_template = "Weight: %s"
 var parasites_template = "Parasites: %s"
@@ -35,10 +41,24 @@ func _ready() -> void:
 	global_position = (get_viewport_rect().size / 2)
 	# var scaled_size = (get_viewport_rect().size / 10)
 	
+	width = page_sprite.get_rect().size.x
+	height = page_sprite.get_rect().size.y
+	
 	# Child setup
 	switch_page_layout(0)
 	update_full_page("zero")
 	page_text.add_theme_color_override("font_color", Color.BLACK)
+
+func _input(event: InputEvent) -> void:
+	if hovering and event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+		dragging = true
+	elif hovering and event is InputEventMouseButton and event.is_released() and event.button_index == MOUSE_BUTTON_LEFT:
+		dragging = false
+	
+func _process(_delta) -> void:
+	# Checks if the mouse is over the tool, and the left mouse button is pressed (Dragging)
+	if dragging:
+		global_position = get_global_mouse_position()# - Vector2(width, height)
 
 func reload_page():
 	match current_page:
@@ -70,7 +90,6 @@ func _on_prev_page_button_pressed() -> void:
 	if current_page - 1 >= 0:
 		current_page = current_page - 1
 		reload_page()
-
 
 func _on_close_button_pressed() -> void:
 	visible = false
@@ -108,3 +127,10 @@ func update_fish_page(index: String) -> void:
 		print("No reference page for index: " + index)
 		title_text.text = "Loris"
 		page_text.text = "Lepsum, something went wrong..."
+
+
+func _on_draggable_area_mouse_entered() -> void:
+	hovering = true
+
+func _on_draggable_area_mouse_exited() -> void:
+	hovering = false

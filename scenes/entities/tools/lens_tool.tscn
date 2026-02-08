@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ce6q3y71l7n2p"]
 
 [ext_resource type="Script" uid="uid://d1pfs8kscw7y6" path="res://scripts/entities/tools/lens_tool.gd" id="1_pu8jq"]
-[ext_resource type="Texture2D" uid="uid://dja81id5eqpu1" path="res://resources/images/tools/placeholder_lens_look_for_glow.png" id="2_pu8jq"]
+[ext_resource type="Texture2D" uid="uid://bt6st3tmvq1pe" path="res://resources/images/tools/tool_lens.png" id="2_pu8jq"]
 
 [node name="LensTool" type="Control" unique_id=1925155566]
 z_index = 2
