@@ -1,6 +1,5 @@
 extends Control
 
-@onready var settings_button = $CenterContainer/Panel/MarginContainer/VBoxContainer/SettingsButton
 @onready var main_menu_button = $CenterContainer/Panel/MarginContainer/VBoxContainer/MainMenuButton
 @onready var quit_button = $CenterContainer/Panel/MarginContainer/VBoxContainer/QuitButton
 
@@ -28,7 +27,6 @@ func _input(event):
 func _on_main_menu_button_pressed() -> void:
 	get_tree().set_pause(false)
 	get_tree().change_scene_to_file("res://scenes/menus/main_menu.tscn")
-
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit(0)
