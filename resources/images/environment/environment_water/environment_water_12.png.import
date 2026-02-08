@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daoc6lo1bvg05"
-path="res://.godot/imported/fish_bi_imp_normal.png-6319c5f5d72e381d0affd83283303742.ctex"
+uid="uid://to7u2q5jp3nn"
+path="res://.godot/imported/environment_water_12.png-09d418dddc4d516d7da8ec0db104548b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/images/fish/fish_bi_imp_normal.png"
-dest_files=["res://.godot/imported/fish_bi_imp_normal.png-6319c5f5d72e381d0affd83283303742.ctex"]
+source_file="res://resources/images/environment/environment_water/environment_water_12.png"
+dest_files=["res://.godot/imported/environment_water_12.png-09d418dddc4d516d7da8ec0db104548b.ctex"]
 
 [params]
 
