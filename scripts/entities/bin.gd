@@ -16,6 +16,7 @@ func setup(_state: int):
 	state = _state
 
 func _on_area_entered(area: Area2D) -> void:
+	Audio.play_random_sfx(SFX.smack_group)
 	apply_state(area)
 
 func apply_state(area: Area2D):

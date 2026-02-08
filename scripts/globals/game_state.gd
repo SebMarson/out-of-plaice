@@ -40,6 +40,7 @@ func start_timer(_wait_time: float):
 		corruption = 0
 
 func _on_timeout() -> void:
+	Audio.play_sfx(SFX.fog_horn)
 	SignalBus.day_timer_expired.emit()
 
 func _on_fish_sale(fish) -> void:

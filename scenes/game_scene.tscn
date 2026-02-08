@@ -295,6 +295,7 @@ scale = Vector2(0.45632017, 0.432406)
 texture = ExtResource("4_bw6k5")
 
 [node name="GUI" parent="." unique_id=666454751 instance=ExtResource("2_onqr8")]
+z_index = 1
 
 [node name="AreaBoundaries" type="StaticBody2D" parent="." unique_id=1850232620]
 
