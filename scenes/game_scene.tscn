@@ -304,11 +304,11 @@ position = Vector2(646, 619.5)
 shape = SubResource("RectangleShape2D_w5aja")
 
 [node name="LeftShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=613815301]
-position = Vector2(-32, 344.75)
+position = Vector2(-45, 345)
 shape = SubResource("RectangleShape2D_onqr8")
 
 [node name="RightShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=1714362268]
-position = Vector2(1295, 363.875)
+position = Vector2(1197, 352)
 shape = SubResource("RectangleShape2D_ycayy")
 
 [node name="TopShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=933848601]

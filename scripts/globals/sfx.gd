@@ -15,10 +15,11 @@ const goodfish_slurplipsmackmmm = "res://resources/audio/sfx/fish_noises/goodfis
 const goodfish_yummy = "res://resources/audio/sfx/fish_noises/goodfish_yummy.wav"
 const ocean_ambiance = "res://resources/audio/sfx/207553__bone666138__ocean-ambience-costal-with-foghorn.wav"
 const sea_waves = "res://resources/audio/sfx/2089_sea-waves-01.wav"
-const smack_1 = "res://resources/audio/sfx/binnoises/plasticbagnoisesquelchmetal1.wav"
-const smack_2 = "res://resources/audio/sfx/binnoises/plasticbagnoisesquelchmetal2.wav"
-const smack_3 = "res://resources/audio/sfx/binnoises/plasticbagnoisesquelchmetal3.wav"
-const smack_4 = "res://resources/audio/sfx/binnoises/plasticbagnoisesquelchmetal4.wav"
+const smack_1 = "res://resources/audio/sfx/binnoises/plasticbagnoisesquelchmetal1trimmed-001.wav"
+const smack_2 = "res://resources/audio/sfx/binnoises/plasticbagnoisesquelchmetal1trimmed-002.wav"
+const smack_3 = "res://resources/audio/sfx/binnoises/plasticbagnoisesquelchmetal1trimmed-003.wav"
+const smack_4 = "res://resources/audio/sfx/binnoises/plasticbagnoisesquelchmetal1trimmed-004.wav"
+const smack_5 = "res://resources/audio/sfx/binnoises/plasticbagnoisesquelchmetal1trimmed-005.wav"
 const fog_horn = "res://resources/audio/sfx/507471__danjocross__long-distant-foghorn.wav"
 
-const smack_group = [smack_1, smack_2, smack_3, smack_4]
+const smack_group = [smack_1, smack_2, smack_3, smack_4, smack_5]
