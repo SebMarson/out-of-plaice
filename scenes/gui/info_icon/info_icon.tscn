@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bxaatm031wpyc"]
+
+[ext_resource type="Script" uid="uid://h2d8kyso0bfo" path="res://scripts/gui/info_icon.gd" id="1_dwxvh"]
+[ext_resource type="Texture2D" uid="uid://dgo5f05l1exbn" path="res://resources/images/gui/clock/gui_clock_corruption_bar_fill.png" id="2_dwxvh"]
+[ext_resource type="Texture2D" uid="uid://blrmqax1fpuh3" path="res://resources/images/gui/clock/gui_clock_corruption_bar_background.png" id="2_ppbk8"]
+[ext_resource type="Texture2D" uid="uid://44g0dcu408wn" path="res://resources/images/gui/clock/gui_clock_main_body.png" id="3_ecy53"]
+[ext_resource type="Texture2D" uid="uid://djugl5ua6rnbp" path="res://resources/images/gui/clock/gui_clock_hour_hand.png" id="4_8f4bm"]
+[ext_resource type="Texture2D" uid="uid://dw3vnlpgbt7fg" path="res://resources/images/gui/clock/gui_clock_minute_hand.png" id="5_tuggo"]
+
+[node name="InfoIcon" type="Control" unique_id=1305602635]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dwxvh")
+
+[node name="BarBackgroundSprite" type="Sprite2D" parent="." unique_id=30463364]
+position = Vector2(85, 97)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_ppbk8")
+
+[node name="CorruptionBar" type="TextureProgressBar" parent="." unique_id=383088458]
+layout_mode = 0
+offset_left = -65.0
+offset_top = -82.0
+offset_right = 535.0
+offset_bottom = 281.0
+scale = Vector2(0.8, 0.8)
+max_value = 90.0
+value = 80.0
+rounded = true
+texture_progress = ExtResource("2_dwxvh")
+
+[node name="ClockSprite" type="Sprite2D" parent="." unique_id=378387949]
+position = Vector2(81.99999, 94.99999)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_ecy53")
+
+[node name="HourHandSprite" type="Sprite2D" parent="." unique_id=1208153427]
+position = Vector2(81.99999, 94.99999)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_8f4bm")
+
+[node name="MinuteHandSprite" type="Sprite2D" parent="." unique_id=1910823331]
+position = Vector2(81.99999, 94.99999)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tuggo")

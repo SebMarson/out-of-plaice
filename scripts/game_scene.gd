@@ -60,7 +60,7 @@ func _ready() -> void:
 	water_sprite_2.play()
 	
 	# Start game
-	SignalBus.day_timer_start.emit(25)
+	SignalBus.day_timer_start.emit(GameState.day_length_seconds)
 	
 func _process(_delta) -> void:
 	# todo - bad way to do this, should just have trigger on each fish destroy that if the array is zero we regen then

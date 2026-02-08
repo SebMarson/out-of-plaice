@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://qh5ipht3cg47" path="res://scripts/gui/gui.gd" id="1_q21vd"]
 [ext_resource type="PackedScene" uid="uid://blfkit4v8y4xv" path="res://scenes/gui/debug_menu.tscn" id="2_x2qsw"]
 [ext_resource type="Texture2D" uid="uid://db4n7tceicujp" path="res://resources/images/book/book_front.png" id="3_6qyx7"]
-[ext_resource type="Texture2D" uid="uid://b8cghnqbm6dqm" path="res://resources/images/gui/time-corruption.png" id="4_lrwm8"]
 [ext_resource type="PackedScene" uid="uid://c4kn82qomfy57" path="res://scenes/entities/tools/weight_tool.tscn" id="5_ort37"]
 [ext_resource type="PackedScene" uid="uid://ce6q3y71l7n2p" path="res://scenes/entities/tools/lens_tool.tscn" id="6_gv5p5"]
 [ext_resource type="PackedScene" uid="uid://dred0rfo3r272" path="res://scenes/entities/tools/aura_tool.tscn" id="7_6qyx7"]
 [ext_resource type="PackedScene" uid="uid://c1v6tqpmgsxxx" path="res://scenes/entities/tools/lick_tool.tscn" id="7_453fe"]
+[ext_resource type="PackedScene" uid="uid://bxaatm031wpyc" path="res://scenes/gui/info_icon/info_icon.tscn" id="8_6qyx7"]
 [ext_resource type="PackedScene" uid="uid://i8bcy4aolruq" path="res://scenes/gui/escape_menu.tscn" id="8_ort37"]
 [ext_resource type="PackedScene" uid="uid://des563d803l43" path="res://scenes/gui/pause_overlay.tscn" id="9_gv5p5"]
 
@@ -97,10 +97,8 @@ layout_mode = 2
 [node name="LickTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=707313709 instance=ExtResource("7_453fe")]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ElementsContainer/BottomContainer/HBoxContainer" unique_id=204690578]
-custom_minimum_size = Vector2(128, 128)
+[node name="InfoIcon" parent="ElementsContainer/BottomContainer/HBoxContainer" unique_id=1305602635 instance=ExtResource("8_6qyx7")]
 layout_mode = 2
-texture = ExtResource("4_lrwm8")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1431696419]
 layout_mode = 1
