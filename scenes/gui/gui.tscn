@@ -6,10 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://c4kn82qomfy57" path="res://scenes/entities/tools/weight_tool.tscn" id="5_ort37"]
 [ext_resource type="PackedScene" uid="uid://ce6q3y71l7n2p" path="res://scenes/entities/tools/lens_tool.tscn" id="6_gv5p5"]
 [ext_resource type="PackedScene" uid="uid://dred0rfo3r272" path="res://scenes/entities/tools/aura_tool.tscn" id="7_6qyx7"]
-[ext_resource type="PackedScene" uid="uid://dbl43npqslpl" path="res://scenes/entities/tools/mouth_tool.tscn" id="7_453fe"]
+[ext_resource type="PackedScene" path="res://scenes/entities/tools/mouth_tool.tscn" id="7_453fe"]
 [ext_resource type="PackedScene" uid="uid://bxaatm031wpyc" path="res://scenes/gui/info_icon/info_icon.tscn" id="8_6qyx7"]
 [ext_resource type="PackedScene" uid="uid://i8bcy4aolruq" path="res://scenes/gui/escape_menu.tscn" id="8_ort37"]
 [ext_resource type="PackedScene" uid="uid://des563d803l43" path="res://scenes/gui/pause_overlay.tscn" id="9_gv5p5"]
+[ext_resource type="Texture2D" uid="uid://d0js3ucf245x8" path="res://resources/images/gui/gui_toolbar.png" id="11_453fe"]
 
 [node name="GUI" type="Control" unique_id=217434855]
 layout_mode = 3
@@ -22,6 +23,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
 script = ExtResource("1_q21vd")
+
+[node name="GUIBackgroundSprite" type="Sprite2D" parent="." unique_id=1692482748]
+position = Vector2(639.75, 360.75)
+scale = Vector2(0.501, 0.5)
+texture = ExtResource("11_453fe")
 
 [node name="ElementsContainer" type="VBoxContainer" parent="." unique_id=1068590774]
 layout_mode = 1
@@ -85,16 +91,36 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 8
 
-[node name="AuraTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1925155566 instance=ExtResource("7_6qyx7")]
+[node name="MarginContainer" type="MarginContainer" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1381649862]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_right = 18
+
+[node name="AuraTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer/MarginContainer" unique_id=1925155566 instance=ExtResource("7_6qyx7")]
 layout_mode = 2
 
-[node name="WeightTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1825591970 instance=ExtResource("5_ort37")]
+[node name="MarginContainer2" type="MarginContainer" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=2051937529]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_right = 18
+
+[node name="WeightTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer/MarginContainer2" unique_id=1825591970 instance=ExtResource("5_ort37")]
 layout_mode = 2
 
-[node name="LensTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1809914959 instance=ExtResource("6_gv5p5")]
+[node name="MarginContainer3" type="MarginContainer" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1630434941]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_right = 18
+
+[node name="LensTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer/MarginContainer3" unique_id=1809914959 instance=ExtResource("6_gv5p5")]
 layout_mode = 2
 
-[node name="MouthTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=543517583 instance=ExtResource("7_453fe")]
+[node name="MarginContainer4" type="MarginContainer" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=466929906]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_right = 15
+
+[node name="MouthTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer/MarginContainer4" unique_id=543517583 instance=ExtResource("7_453fe")]
 layout_mode = 2
 
 [node name="InfoIcon" parent="ElementsContainer/BottomContainer/HBoxContainer" unique_id=1305602635 instance=ExtResource("8_6qyx7")]
