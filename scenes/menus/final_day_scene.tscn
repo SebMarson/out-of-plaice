@@ -36,3 +36,8 @@ horizontal_alignment = 1
 layout_mode = 2
 text = "Are you proud of yourself?"
 horizontal_alignment = 1
+
+[node name="TryAgainButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=238815833]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Try Again?"
