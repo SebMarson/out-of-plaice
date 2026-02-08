@@ -28,7 +28,7 @@ func _init():
 
 func _ready() -> void:
 	# Start the music
-	Audio.play_music(Music.sleepy_sailor_1)
+	Audio.play_music(Music.sleepy_sailor_comp)
 	Audio.play_sfx(SFX.ocean_ambiance)
 	
 	# Link signals

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cntkpp5f0jd3v"]
 
 [ext_resource type="Script" uid="uid://d1b1ctr66o1vj" path="res://scripts/menus/main_menu.gd" id="1_xqga4"]
+[ext_resource type="Texture2D" uid="uid://d0vw47d6l3or7" path="res://logos/outofplaicelogo4.png" id="2_ovrgc"]
 
 [node name="MainMenu" type="Control" unique_id=1802740721]
 layout_mode = 3
@@ -13,13 +14,15 @@ script = ExtResource("1_xqga4")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1573271274]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -195.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1070998036]
+[node name="VBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=2053133099]
 layout_mode = 2
 
 [node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2060255123]
@@ -34,6 +37,12 @@ text = "Settings
 [node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1948809035]
 layout_mode = 2
 text = "Quit"
+
+[node name="Outofplaicelogo4" type="Sprite2D" parent="." unique_id=219076793]
+z_index = -1
+position = Vector2(641.25, 358.75)
+scale = Vector2(0.67265624, 0.67453706)
+texture = ExtResource("2_ovrgc")
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Settings_button" to="." method="_on_settings_button_pressed"]

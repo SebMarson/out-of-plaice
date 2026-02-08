@@ -16,7 +16,7 @@ var batch_size: int = 2
 var corruption: int = 0
 var corruption_max: int = 100
 var days_in_run: int = 5
-var day_length_seconds: int = 25
+var day_length_seconds: int = 122
 
 func _init() -> void:
 	# Setup timer
