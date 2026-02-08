@@ -30,6 +30,12 @@ GameState="*uid://dvs3827maljis"
 Audio="*uid://cm3bj4cx7m8kp"
 TextRepo="*uid://bbormn3ljcond"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
+
 [input]
 
 ui_debug_menu={

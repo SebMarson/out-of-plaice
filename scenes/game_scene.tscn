@@ -255,16 +255,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5aja"]
-size = Vector2(1331, 223)
+size = Vector2(4509, 422)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onqr8"]
-size = Vector2(96, 706.5)
+size = Vector2(96, 2313)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ycayy"]
-size = Vector2(105.5, 734.25)
+size = Vector2(105.5, 2316)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bw6k5"]
-size = Vector2(1392, 116)
+size = Vector2(4239, 116)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3j0m"]
 size = Vector2(442, 138)
@@ -273,25 +273,25 @@ size = Vector2(442, 138)
 script = ExtResource("1_w5aja")
 
 [node name="WaterSprite" type="AnimatedSprite2D" parent="." unique_id=1512645743]
-position = Vector2(292.49997, 260)
-scale = Vector2(1.158203, 1)
+position = Vector2(319.49997, 260)
+scale = Vector2(1.2636718, 1)
 sprite_frames = SubResource("SpriteFrames_6h3me")
 frame_progress = 0.040330667
 
 [node name="WaterSprite2" type="AnimatedSprite2D" parent="." unique_id=1797450590]
-position = Vector2(882.00006, 260)
-scale = Vector2(1.1445311, 1)
+position = Vector2(962, 259)
+scale = Vector2(1.2441405, 1)
 sprite_frames = SubResource("SpriteFrames_6h3me")
 frame_progress = 0.6830976
 
 [node name="BackgroundSprite" type="Sprite2D" parent="." unique_id=218776990]
-position = Vector2(582, 327.49997)
-scale = Vector2(0.4459196, 0.44482997)
+position = Vector2(638, 340.49997)
+scale = Vector2(0.50449044, 0.462873)
 texture = ExtResource("3_ycayy")
 
 [node name="TableSprite" type="Sprite2D" parent="." unique_id=1127452033]
-position = Vector2(569.5, 325)
-scale = Vector2(0.45632017, 0.432406)
+position = Vector2(621.5, 358.49997)
+scale = Vector2(0.5070766, 0.46510482)
 texture = ExtResource("4_bw6k5")
 
 [node name="GUI" parent="." unique_id=666454751 instance=ExtResource("2_onqr8")]
@@ -300,19 +300,19 @@ z_index = 1
 [node name="AreaBoundaries" type="StaticBody2D" parent="." unique_id=1850232620]
 
 [node name="BottomShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=1682673169]
-position = Vector2(646, 619.5)
+position = Vector2(824.5, 719)
 shape = SubResource("RectangleShape2D_w5aja")
 
 [node name="LeftShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=613815301]
-position = Vector2(-45, 345)
+position = Vector2(-45, 387.5)
 shape = SubResource("RectangleShape2D_onqr8")
 
 [node name="RightShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=1714362268]
-position = Vector2(1197, 352)
+position = Vector2(1280, 393)
 shape = SubResource("RectangleShape2D_ycayy")
 
 [node name="TopShape" type="CollisionShape2D" parent="AreaBoundaries" unique_id=933848601]
-position = Vector2(609, -51)
+position = Vector2(938.5, -51)
 shape = SubResource("RectangleShape2D_bw6k5")
 
 [node name="SpawnArea" type="Area2D" parent="." unique_id=489085022]
