@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dbl43npqslpl"]
 
 [ext_resource type="Script" uid="uid://b88238ww7wob" path="res://scripts/entities/tools/mouth_tool.gd" id="1_bk8wb"]
-[ext_resource type="Texture2D" uid="uid://3erejbtecksy" path="res://resources/images/tools/placeholder_look_in_mouth.png" id="2_bk8wb"]
+[ext_resource type="Texture2D" uid="uid://coh0j4xx40x52" path="res://resources/images/tools/tool_mouth.png" id="2_bk8wb"]
 
 [node name="MouthTool" type="Control" unique_id=1925155566]
 z_index = 2
