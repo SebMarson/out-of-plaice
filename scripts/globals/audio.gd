@@ -30,7 +30,6 @@ func play_sfx(path_sfx: String):
 	sfx_player.stream = load(path_sfx)
 	sfx_player.play() 
 
-
 func play_random_sfx(sfx_group: Array):
 	play_sfx(sfx_group.pick_random())
 
