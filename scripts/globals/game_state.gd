@@ -30,7 +30,8 @@ func _init() -> void:
 	# Connect signals
 	SignalBus.sell_fish.connect(_on_fish_sale)
 	SignalBus.destroy_fish.connect(_on_fish_destroy)
-	
+
+
 func start_timer(_wait_time: float):
 	day_timer.start(_wait_time)
 	fish_sold_today = 0
@@ -41,13 +42,22 @@ func start_timer(_wait_time: float):
 	if current_day == 1:
 		corruption = 0
 
+
+
 func _on_timeout() -> void:
 	Audio.play_sfx(SFX.fog_horn)
 	SignalBus.day_timer_expired.emit()
 
 func _on_fish_sale(fish) -> void:
 	if not fish.tainted:
-		player_money = player_money + 1
+		match fish.value :
+			Value.LOW:
+					player_money = player_money + 1
+			Value.MID:
+					player_money = player_money + 3
+			Value.HIGH:
+					player_money = player_money + 5
+	
 	else:
 		increase_corruption(10)
 	fish_sold_today = fish_sold_today + 1
