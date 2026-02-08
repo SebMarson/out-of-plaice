@@ -15,6 +15,7 @@ var batch_size: int = 2
 # Game info
 var corruption: int = 0
 var corruption_max: int = 100
+var days_in_run: int = 5
 
 func _init() -> void:
 	# Setup timer

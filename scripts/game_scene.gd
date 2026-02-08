@@ -79,7 +79,10 @@ func remove_fish(_fish) -> void:
 	fish.remove_at(fish.find(_fish))
 	
 func _on_day_timeout():
-	get_tree().change_scene_to_file("res://scenes/menus/end_day_scene.tscn")
+	if GameState.days_in_run == GameState.current_day:
+		get_tree().change_scene_to_file("res://scenes/menus/final_day_scene.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/menus/end_day_scene.tscn")
 
 func _on_corruption_peaked() -> void:
 	get_tree().change_scene_to_file("res://scenes/menus/fail_scene.tscn")

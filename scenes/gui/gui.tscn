@@ -74,7 +74,7 @@ size_flags_vertical = 10
 layout_mode = 2
 
 [node name="ReferenceBookButton" type="TextureButton" parent="ElementsContainer/BottomContainer/HBoxContainer" unique_id=56149513]
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 texture_normal = ExtResource("3_6qyx7")
 ignore_texture_size = true
@@ -83,6 +83,7 @@ stretch_mode = 0
 [node name="ToolsContainer" type="HBoxContainer" parent="ElementsContainer/BottomContainer/HBoxContainer" unique_id=1180165801]
 layout_mode = 2
 size_flags_horizontal = 6
+size_flags_vertical = 8
 
 [node name="AuraTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=1925155566 instance=ExtResource("7_6qyx7")]
 layout_mode = 2
