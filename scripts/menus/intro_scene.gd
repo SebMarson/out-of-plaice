@@ -8,6 +8,7 @@ extends Control
 @onready var water_6 = $WaterNode/Water6
 
 @onready var intro_label = $CenterContainer/IntroTextLabel
+@onready var explanation_label = $CenterContainer/ExplanationTextLabel
 @onready var skip_label = $MarginContainer/SkipLabel
 
 @onready var animation_player = $AnimationPlayer
@@ -21,6 +22,7 @@ func _ready() -> void:
 	water_6.play()
 	
 	intro_label.text = TextRepo.intro_text_to_game
+	explanation_label.text = TextRepo.explanation_text_to_game
 	animation_player.play("intro")
 	
 

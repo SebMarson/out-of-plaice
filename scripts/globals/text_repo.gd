@@ -1,7 +1,8 @@
 extends Node
 
 #Intro text
-const intro_text_to_game: String = "You wake up, again. Still here in this dreary place. \n Another day at work, surely soon you’ll have enough money to get far from here. \n Far from the horrid sea. \n Anyway, it’s time for work, better get up and out. \n The fish won’t sort themselves."
+const intro_text_to_game: String = "You wake up, again. Still here in this dreary place. \nAnother day at work, surely soon you’ll have enough money to get far from here. \n Far from the horrid sea. \n Anyway, it’s time for work, better get up and out. \n The fish won’t sort themselves."
+const explanation_text_to_game: String = "The fishermen will give you their latest catch. \nYou must use the tools provided to inspect the fish. \nConsult the reference book to find what a healthy fish is like. \nBe careful to only sell healthy fish. Selling tainted fish will corrupt the locals who buy it. \nToo much corruption and you're liable to lose your job..."
 
 #Game Over text - Player causes too much corruption
 const gameover_text_corruption: String = "You have allowed too many bad fish to be eaten.
