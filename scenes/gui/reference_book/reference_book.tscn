@@ -2,10 +2,11 @@
 
 [ext_resource type="Script" uid="uid://b6yaork5eiufu" path="res://scripts/gui/reference_book/reference_book.gd" id="1_tcxm7"]
 [ext_resource type="Texture2D" uid="uid://ce1w4hf3hmxhm" path="res://resources/images/book/book_page.png" id="2_am5yk"]
-[ext_resource type="Texture2D" uid="uid://cvvaphy8d67ys" path="res://resources/images/gui/reference_book/next_page_placeholder.png" id="3_am5yk"]
 [ext_resource type="Texture2D" uid="uid://6kf8ujccrot8" path="res://resources/images/fish/fish_plaice_normal.png" id="3_vt62c"]
-[ext_resource type="Texture2D" uid="uid://n54v7va5gsxl" path="res://resources/images/gui/reference_book/close_book_placeholder.png" id="4_ia8xe"]
 [ext_resource type="Texture2D" uid="uid://dw8osfd515s03" path="res://resources/images/tools/tool_aura.png" id="4_vt62c"]
+[ext_resource type="Texture2D" uid="uid://c77hbnb4hiy41" path="res://resources/images/gui/buttons/gui_arrow_right.png" id="5_fw32k"]
+[ext_resource type="Texture2D" uid="uid://dvxlwcawcmoum" path="res://resources/images/gui/buttons/gui_arrow_left.png" id="6_jyt4w"]
+[ext_resource type="Texture2D" uid="uid://q1m0q7qewkmp" path="res://resources/images/gui/buttons/gui_cross.png" id="7_fw32k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_am5yk"]
 size = Vector2(303, 333)
@@ -44,10 +45,11 @@ offset_bottom = 40.0
 [node name="PageText" type="Label" parent="FullPageChildren" unique_id=1983112928]
 layout_mode = 0
 offset_left = -162.0
-offset_top = -129.0
+offset_top = -162.0
 offset_right = 162.0
-offset_bottom = 174.0
+offset_bottom = 154.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
 text = "lapis lorem"
 autowrap_mode = 3
 
@@ -58,7 +60,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="FishSprite" type="Sprite2D" parent="FishPageChildren" unique_id=1305495542]
-position = Vector2(-102, -101)
+position = Vector2(-101, -65)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_vt62c")
 
@@ -67,7 +69,7 @@ layout_mode = 0
 offset_left = -34.0
 offset_top = -171.0
 offset_right = 160.0
-offset_bottom = -46.0
+offset_bottom = 32.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 12
 text = "Loreli"
@@ -75,19 +77,19 @@ autowrap_mode = 3
 
 [node name="HealthyTitleLabel" type="Label" parent="FishPageChildren" unique_id=1056280548]
 layout_mode = 0
-offset_left = -59.0
-offset_top = -39.0
-offset_right = 63.0
-offset_bottom = -16.0
+offset_left = -61.0
+offset_top = 37.0
+offset_right = 61.0
+offset_bottom = 60.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Healthy Stats"
 
 [node name="GridContainer" type="GridContainer" parent="FishPageChildren" unique_id=778315550]
 layout_mode = 0
-offset_left = -150.0
-offset_top = 6.0
+offset_left = -160.0
+offset_top = 73.0
 offset_right = 165.0
-offset_bottom = 83.0
+offset_bottom = 150.0
 columns = 2
 
 [node name="WeightLabel" type="Label" parent="FishPageChildren/GridContainer" unique_id=1456412274]
@@ -117,10 +119,10 @@ text = "Rarity: Common"
 
 [node name="GlowLabel" type="Label" parent="FishPageChildren" unique_id=2070996266]
 layout_mode = 0
-offset_left = -66.0
-offset_top = 104.0
-offset_right = 59.0
-offset_bottom = 127.0
+offset_left = -67.0
+offset_top = 162.0
+offset_right = 68.0
+offset_bottom = 185.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Should not glow"
 
@@ -141,32 +143,34 @@ layout_mode = 0
 offset_left = -157.0
 offset_top = -54.0
 offset_right = 159.0
-offset_bottom = 98.0
+offset_bottom = 151.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Testing testing baby"
 autowrap_mode = 3
 
 [node name="NextPageButton" type="TextureButton" parent="." unique_id=2030013052]
-offset_left = 100.0
-offset_top = 109.0
-offset_right = 170.0
-offset_bottom = 184.0
-texture_normal = ExtResource("3_am5yk")
+offset_left = 89.0
+offset_top = 142.0
+offset_right = 602.0
+offset_bottom = 655.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("5_fw32k")
 
 [node name="PrevPageButton" type="TextureButton" parent="." unique_id=1349632767]
-offset_left = -168.0
-offset_top = 106.0
-offset_right = -98.0
-offset_bottom = 181.0
-texture_normal = ExtResource("3_am5yk")
-flip_h = true
+offset_left = -166.0
+offset_top = 143.0
+offset_right = 347.0
+offset_bottom = 656.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("6_jyt4w")
 
 [node name="CloseButton" type="TextureButton" parent="." unique_id=2140146494]
-offset_left = 125.0
-offset_top = -209.0
-offset_right = 195.0
-offset_bottom = -134.0
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("4_ia8xe")
+offset_left = 128.0
+offset_top = -220.0
+offset_right = 641.0
+offset_bottom = 293.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("7_fw32k")
 
 [connection signal="mouse_entered" from="DraggableArea" to="." method="_on_draggable_area_mouse_entered"]
 [connection signal="mouse_exited" from="DraggableArea" to="." method="_on_draggable_area_mouse_exited"]

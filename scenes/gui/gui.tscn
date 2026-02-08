@@ -118,7 +118,7 @@ layout_mode = 2
 [node name="MarginContainer4" type="MarginContainer" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer" unique_id=466929906]
 layout_mode = 2
 theme_override_constants/margin_left = 18
-theme_override_constants/margin_right = 15
+theme_override_constants/margin_right = 18
 
 [node name="MouthTool" parent="ElementsContainer/BottomContainer/HBoxContainer/ToolsContainer/MarginContainer4" unique_id=543517583 instance=ExtResource("7_453fe")]
 layout_mode = 2
