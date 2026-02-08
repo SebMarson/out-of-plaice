@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cvwnd63sdt656"]
 
 [ext_resource type="Script" uid="uid://6wymsrc0r6vc" path="res://scripts/menus/fail_scene.gd" id="1_2gcj5"]
-[ext_resource type="Theme" path="res://FailScreenTheme.tres" id="2_wk2d6"]
+[ext_resource type="Theme" uid="uid://cv1m6cm4t0225" path="res://FailScreenTheme.tres" id="2_wk2d6"]
 
 [node name="FailScene" type="Control" unique_id=1234848961]
 layout_mode = 3
