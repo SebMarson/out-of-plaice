@@ -7,3 +7,4 @@ const end_of_days: String = "res://resources/audio/music/end_of_days_trimmed.wav
 const sleepy_sailor_1: String = "res://resources/audio/music/sleepy_sailor_1_trimmed.wav"
 const sleepy_sailor_2: String = "res://resources/audio/music/sleepy_sailor_2_trimmed.wav"
 const sleepy_sailor_3: String = "res://resources/audio/music/sleepy_sailor_3_trimmed.wav"
+const sleepy_sailor_comp: String = "res://resources/audio/music/sleepy_sailor_comp.wav"
