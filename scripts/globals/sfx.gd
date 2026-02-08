@@ -23,3 +23,5 @@ const smack_5 = "res://resources/audio/sfx/binnoises/plasticbagnoisesquelchmetal
 const fog_horn = "res://resources/audio/sfx/507471__danjocross__long-distant-foghorn.wav"
 
 const smack_group = [smack_1, smack_2, smack_3, smack_4, smack_5]
+const good_group = [goodfish_ahhh, goodfish_delicious, goodfish_lipsmackingyeah, goodfish_mmm, goodfish_nice, goodfish_slurplipsmackmmm, goodfish_yummy]
+const bad_group = [badfish_bleghspit, badfish_eurgghhdisgusting, badfish_slurperugherugh, badfish_slurplipsmackeughh]

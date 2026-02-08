@@ -51,6 +51,7 @@ func _on_timeout() -> void:
 
 func _on_fish_sale(fish) -> void:
 	if not fish.tainted:
+		Audio.play_random_sfx(SFX.good_group)
 		match fish.value :
 			Value.LOW:
 					player_money = player_money + 1
@@ -60,6 +61,7 @@ func _on_fish_sale(fish) -> void:
 					player_money = player_money + 5
 	
 	else:
+		Audio.play_random_sfx(SFX.bad_group)
 		increase_corruption(10)
 	fish_sold_today = fish_sold_today + 1
 

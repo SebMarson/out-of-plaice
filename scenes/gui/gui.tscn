@@ -162,6 +162,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="ToolWindowPopup" type="PanelContainer" parent="CenterContainer" unique_id=241001425]
+visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer/ToolWindowPopup" unique_id=1632671123]
