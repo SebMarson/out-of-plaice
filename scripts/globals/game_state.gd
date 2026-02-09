@@ -11,7 +11,7 @@ var fish_destroyed_today: int = 0
 var player_money: int = 0
 
 # Current level info
-var batch_size: int = 2
+var batch_size: int = 3
 
 # Game info
 var corruption: int = 0
