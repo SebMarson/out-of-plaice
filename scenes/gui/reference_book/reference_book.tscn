@@ -94,26 +94,31 @@ columns = 2
 
 [node name="WeightLabel" type="Label" parent="FishPageChildren/GridContainer" unique_id=1456412274]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Weight: 1g"
 
 [node name="ParasitesLabel" type="Label" parent="FishPageChildren/GridContainer" unique_id=490012064]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Parasites: None"
 
 [node name="AuraLabel" type="Label" parent="FishPageChildren/GridContainer" unique_id=1245122208]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Aura: Indecisive"
 
 [node name="ValueLabel" type="Label" parent="FishPageChildren/GridContainer" unique_id=1910110675]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Value: High"
 
 [node name="RarityLabel" type="Label" parent="FishPageChildren/GridContainer" unique_id=1391054730]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Rarity: Common"
 
