@@ -30,7 +30,7 @@ extends RigidBody2D
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
 func _ready() -> void:
-	weight = randi_range(weight_min, weight_max) * randf_range(0.5, 1.5)
+	weight = randi_range(weight_min, weight_max)
 	
 	# Setup child objects
 	fish_sprite.texture = texture_normal
