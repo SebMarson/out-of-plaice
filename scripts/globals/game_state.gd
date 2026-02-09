@@ -44,6 +44,7 @@ func start_timer(_wait_time: float):
 	# Only do on the first day
 	if current_day == 1:
 		corruption = 0
+		player_money = 0
 
 func _on_timeout() -> void:
 	Audio.play_sfx(SFX.fog_horn)
