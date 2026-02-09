@@ -164,6 +164,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="ToolWindowPopup" type="Control" parent="CenterContainer" unique_id=2091269359]
+visible = false
 custom_minimum_size = Vector2(400, 200)
 layout_mode = 2
 
