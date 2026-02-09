@@ -12,6 +12,7 @@ extends Control
 @onready var tool_window_popup = $CenterContainer/ToolWindowPopup
 @onready var tool_window_label = $CenterContainer/ToolWindowPopup/MarginContainer/VBoxContainer/CenterContainer/ToolInfoLabel
 @onready var tool_window_hide_button = $CenterContainer/ToolWindowPopup/MarginContainer/VBoxContainer/HideWindowButton
+@onready var parasite_texture = $CenterContainer/ToolWindowPopup/ParasiteTexture
 
 # Children
 var reference_book
@@ -52,7 +53,13 @@ func _on_pause_stop() -> void:
 	
 func _on_tool_window_show(_tool_result_text: String) -> void:
 	tool_window_popup.visible = true
-	tool_window_label.text = _tool_result_text
+	if _tool_result_text == "para":
+		tool_window_label.visible = false
+		parasite_texture.visible = true
+	else:
+		tool_window_label.visible = true
+		tool_window_label.text = _tool_result_text
+		parasite_texture.visible = false
 
 func _on_hide_window_button_pressed() -> void:
 	tool_window_popup.visible = false

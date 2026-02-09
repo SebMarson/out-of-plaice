@@ -11,7 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://bxaatm031wpyc" path="res://scenes/gui/info_icon/info_icon.tscn" id="8_6qyx7"]
 [ext_resource type="PackedScene" uid="uid://i8bcy4aolruq" path="res://scenes/gui/escape_menu.tscn" id="8_ort37"]
 [ext_resource type="PackedScene" uid="uid://des563d803l43" path="res://scenes/gui/pause_overlay.tscn" id="9_gv5p5"]
+[ext_resource type="Texture2D" uid="uid://cpmar1k1m1c3t" path="res://resources/images/gui/mouth/gui_mouth_frame.png" id="11_8tpq0"]
 [ext_resource type="Texture2D" uid="uid://d0js3ucf245x8" path="res://resources/images/gui/gui_toolbar.png" id="11_453fe"]
+[ext_resource type="Texture2D" uid="uid://q5rm8lsyg68e" path="res://resources/images/gui/mouth/gui_mouth_empty.png" id="12_3brio"]
 
 [node name="GUI" type="Control" unique_id=217434855]
 layout_mode = 3
@@ -161,12 +163,32 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="ToolWindowPopup" type="PanelContainer" parent="CenterContainer" unique_id=241001425]
-visible = false
+[node name="ToolWindowPopup" type="Control" parent="CenterContainer" unique_id=2091269359]
 layout_mode = 2
 
+[node name="ToolWindowFrameTexture" type="TextureRect" parent="CenterContainer/ToolWindowPopup" unique_id=86965569]
+layout_mode = 0
+offset_right = 249.0
+offset_bottom = 102.0
+texture = ExtResource("11_8tpq0")
+expand_mode = 1
+
+[node name="ParasiteTexture" type="TextureRect" parent="CenterContainer/ToolWindowPopup" unique_id=1828990307]
+visible = false
+layout_mode = 0
+offset_right = 249.0
+offset_bottom = 102.0
+texture = ExtResource("12_3brio")
+expand_mode = 1
+
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer/ToolWindowPopup" unique_id=1632671123]
-layout_mode = 2
+layout_mode = 0
+offset_right = 249.0
+offset_bottom = 102.0
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/ToolWindowPopup/MarginContainer" unique_id=1627967173]
 layout_mode = 2
