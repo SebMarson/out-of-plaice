@@ -76,8 +76,11 @@ func remove_fish(_fish) -> void:
 	fish.remove_at(fish.find(_fish))
 	
 func _on_day_timeout():
-	if GameState.days_in_run == GameState.current_day:
-		get_tree().change_scene_to_file("res://scenes/menus/final_day_scene.tscn")
+	if GameState.current_day >= GameState.days_in_run :
+		if GameState.player_money < 30:
+			get_tree().change_scene_to_file("res://scenes/menus/fail_scene.tscn")
+		else:
+			get_tree().change_scene_to_file("res://scenes/menus/final_day_scene.tscn")
 	else:
 		get_tree().change_scene_to_file("res://scenes/menus/end_day_scene.tscn")
 
