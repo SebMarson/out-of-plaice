@@ -12,7 +12,7 @@ extends Control
 @onready var tool_window_popup = $CenterContainer/ToolWindowPopup
 @onready var tool_window_label = $CenterContainer/ToolWindowPopup/MarginContainer/VBoxContainer/CenterContainer/ToolInfoLabel
 @onready var tool_window_hide_button = $CenterContainer/ToolWindowPopup/MarginContainer/VBoxContainer/HideWindowButton
-@onready var parasite_texture = $CenterContainer/ToolWindowPopup/ParasiteTexture
+@onready var parasite_texture = $CenterContainer/ToolWindowPopup/MarginContainer2/ParasiteTexture
 
 # Children
 var reference_book
@@ -56,6 +56,11 @@ func _on_tool_window_show(_tool_result_text: String) -> void:
 	if _tool_result_text == "para":
 		tool_window_label.visible = false
 		parasite_texture.visible = true
+		parasite_texture.texture = load("res://resources/images/gui/mouth/gui_mouth_parasite.png")
+	elif _tool_result_text == "nopara":
+		tool_window_label.visible = false
+		parasite_texture.visible = true
+		parasite_texture.texture = load("res://resources/images/gui/mouth/gui_mouth_empty.png")
 	else:
 		tool_window_label.visible = true
 		tool_window_label.text = _tool_result_text

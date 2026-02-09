@@ -164,27 +164,44 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="ToolWindowPopup" type="Control" parent="CenterContainer" unique_id=2091269359]
+custom_minimum_size = Vector2(400, 200)
 layout_mode = 2
 
 [node name="ToolWindowFrameTexture" type="TextureRect" parent="CenterContainer/ToolWindowPopup" unique_id=86965569]
-layout_mode = 0
-offset_right = 249.0
-offset_bottom = 102.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("11_8tpq0")
 expand_mode = 1
 
-[node name="ParasiteTexture" type="TextureRect" parent="CenterContainer/ToolWindowPopup" unique_id=1828990307]
+[node name="MarginContainer2" type="MarginContainer" parent="CenterContainer/ToolWindowPopup" unique_id=1165442141]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="ParasiteTexture" type="TextureRect" parent="CenterContainer/ToolWindowPopup/MarginContainer2" unique_id=1828990307]
 visible = false
-layout_mode = 0
-offset_right = 249.0
-offset_bottom = 102.0
+layout_mode = 2
 texture = ExtResource("12_3brio")
 expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer/ToolWindowPopup" unique_id=1632671123]
-layout_mode = 0
-offset_right = 249.0
-offset_bottom = 102.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 25
 theme_override_constants/margin_top = 25
 theme_override_constants/margin_right = 25

@@ -95,4 +95,5 @@ func _on_tool_triggered(tool) -> void:
 	for i in result:
 		var body = i.collider
 		if body is RigidBody2D and body is Fish:
-			SignalBus.tool_results_window_triggered.emit(tool.get_tool_result(body))
+			var tool_result = tool.get_tool_result(body)
+			SignalBus.tool_results_window_triggered.emit(tool_result)
