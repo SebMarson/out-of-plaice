@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://cntkpp5f0jd3v"]
 
 [ext_resource type="Script" uid="uid://d1b1ctr66o1vj" path="res://scripts/menus/main_menu.gd" id="1_xqga4"]
+[ext_resource type="Texture2D" uid="uid://chcuiyqkuk1mt" path="res://resources/images/gui/buttons/gui_button_start.png" id="2_2o76q"]
 [ext_resource type="Texture2D" uid="uid://d0vw47d6l3or7" path="res://logos/outofplaicelogo4.png" id="2_ovrgc"]
+[ext_resource type="Texture2D" uid="uid://bo4tsqwvinu7k" path="res://resources/images/gui/buttons/gui_button_settings.png" id="3_imvie"]
+[ext_resource type="Texture2D" uid="uid://d3372b6t0k8pr" path="res://resources/images/gui/buttons/gui_button_quit.png" id="4_ng0o5"]
 
 [node name="MainMenu" type="Control" unique_id=1802740721]
 layout_mode = 3
@@ -18,25 +21,24 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -195.0
+offset_top = -513.0
 grow_horizontal = 2
 grow_vertical = 0
 
 [node name="VBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=2053133099]
 layout_mode = 2
 
-[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2060255123]
+[node name="StartButton" type="TextureButton" parent="CenterContainer/VBoxContainer" unique_id=147735885]
 layout_mode = 2
-text = "Start"
+texture_normal = ExtResource("2_2o76q")
 
-[node name="Settings_button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1974195282]
+[node name="Settings_button" type="TextureButton" parent="CenterContainer/VBoxContainer" unique_id=1733060813]
 layout_mode = 2
-text = "Settings
-"
+texture_normal = ExtResource("3_imvie")
 
-[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1948809035]
+[node name="QuitButton" type="TextureButton" parent="CenterContainer/VBoxContainer" unique_id=1332150362]
 layout_mode = 2
-text = "Quit"
+texture_normal = ExtResource("4_ng0o5")
 
 [node name="Outofplaicelogo4" type="Sprite2D" parent="." unique_id=219076793]
 z_index = -1

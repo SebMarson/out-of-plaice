@@ -12,7 +12,7 @@ extends Control
 
 func _ready() -> void:
 	money_label.text = "£%d" % [GameState.player_money]
-	distance_label.text = "That's enough money to travel %d away from this hellish sea!" % [GameState.player_money * 10]
+	distance_label.text = "That's enough money to travel %d miles away from this hellish sea!" % [GameState.player_money * 10]
 	car_sprite.play()
 	water_sprite_1.play()
 	water_sprite_2.play()

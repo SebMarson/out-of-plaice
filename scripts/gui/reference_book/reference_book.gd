@@ -78,11 +78,13 @@ func reload_page(reference_book_page: ReferenceBookPage):
 		update_tool_page(reference_book_page)
 
 func _on_next_page_button_pressed() -> void:
+	Audio.play_sfx(SFX.page_turn)
 	if current_page + 1 < available_pages.size():
 		current_page = current_page + 1
 		reload_page(available_pages[current_page])
 
 func _on_prev_page_button_pressed() -> void:
+	Audio.play_sfx(SFX.page_turn)
 	if current_page - 1 >= 0:
 		current_page = current_page - 1
 		reload_page(available_pages[current_page])
