@@ -27,9 +27,9 @@ func _ready() -> void:
 	
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and skip_label.visible != true:
+	if (event is InputEventKey or event is InputEventMouseButton) and event.pressed and skip_label.visible != true:
 		skip_label.visible = true
-	elif event is InputEventKey and event.pressed:
+	elif (event is InputEventKey or event is InputEventMouseButton) and event.pressed:
 		skip()
 		
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
