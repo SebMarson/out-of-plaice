@@ -17,7 +17,7 @@ var batch_size: int = 2
 var corruption: int = 0
 var corruption_max: int = 100
 var days_in_run: int = 5
-var day_length_seconds: int = 122
+var day_length_seconds: int = 15
 
 func _init() -> void:
 	# Setup timer
@@ -44,6 +44,7 @@ func start_timer(_wait_time: float):
 	# Only do on the first day
 	if current_day == 1:
 		corruption = 0
+		player_money = 0
 
 func _on_timeout() -> void:
 	Audio.play_sfx(SFX.fog_horn)

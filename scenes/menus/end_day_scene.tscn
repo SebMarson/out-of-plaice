@@ -1,6 +1,254 @@
 [gd_scene format=3 uid="uid://ce8oedk5c686f"]
 
 [ext_resource type="Script" uid="uid://bpkfb6586cce6" path="res://scripts/menus/end_day_scene.gd" id="1_p3mll"]
+[ext_resource type="Texture2D" uid="uid://dc357ryxg3lfn" path="res://resources/images/environment/environment_water/environment_water_00.png" id="2_w6h02"]
+[ext_resource type="Texture2D" uid="uid://c87c3jni05x0c" path="res://resources/images/environment/environment_water/environment_water_01.png" id="3_5n67j"]
+[ext_resource type="Texture2D" uid="uid://7rpeaq0j74r8" path="res://resources/images/environment/environment_water/environment_water_02.png" id="4_qlpdy"]
+[ext_resource type="Texture2D" uid="uid://gkivq0sbtah8" path="res://resources/images/environment/environment_water/environment_water_03.png" id="5_tv2cg"]
+[ext_resource type="Texture2D" uid="uid://bvsvr0e0xhto0" path="res://resources/images/environment/environment_water/environment_water_04.png" id="6_om87a"]
+[ext_resource type="Texture2D" uid="uid://dp2fdo2mmeugt" path="res://resources/images/environment/environment_water/environment_water_05.png" id="7_7c1s5"]
+[ext_resource type="Texture2D" uid="uid://jix338scescn" path="res://resources/images/environment/environment_water/environment_water_06.png" id="8_mvj16"]
+[ext_resource type="Texture2D" uid="uid://badwrsib1qp8v" path="res://resources/images/environment/environment_water/environment_water_07.png" id="9_jueta"]
+[ext_resource type="Texture2D" uid="uid://c4q20fg5fgmg7" path="res://resources/images/environment/environment_water/environment_water_08.png" id="10_8vj80"]
+[ext_resource type="Texture2D" uid="uid://osh8ma62piqv" path="res://resources/images/environment/environment_water/environment_water_09.png" id="11_u14nq"]
+[ext_resource type="Texture2D" uid="uid://cgloi2sxjs5rq" path="res://resources/images/environment/environment_water/environment_water_10.png" id="12_ip8lp"]
+[ext_resource type="Texture2D" uid="uid://do3pvvaku0l0k" path="res://resources/images/environment/environment_water/environment_water_11.png" id="13_i55v2"]
+[ext_resource type="Texture2D" uid="uid://to7u2q5jp3nn" path="res://resources/images/environment/environment_water/environment_water_12.png" id="14_ay25v"]
+[ext_resource type="Texture2D" uid="uid://b8hkveea4sdlh" path="res://resources/images/environment/environment_water/environment_water_13.png" id="15_jl7si"]
+[ext_resource type="Texture2D" uid="uid://bbbaip2wmsg1i" path="res://resources/images/environment/environment_water/environment_water_14.png" id="16_0fjt5"]
+[ext_resource type="Texture2D" uid="uid://i8x7rj2ds3to" path="res://resources/images/environment/environment_water/environment_water_15.png" id="17_hf5hr"]
+[ext_resource type="Texture2D" uid="uid://b5xntjijsw3pt" path="res://resources/images/environment/environment_water/environment_water_16.png" id="18_v25jo"]
+[ext_resource type="Texture2D" uid="uid://de5w084323md4" path="res://resources/images/environment/environment_water/environment_water_17.png" id="19_65d1y"]
+[ext_resource type="Texture2D" uid="uid://bbfefxdgfxkmt" path="res://resources/images/environment/environment_water/environment_water_18.png" id="20_68pxk"]
+[ext_resource type="Texture2D" uid="uid://dpwbsxp050mp4" path="res://resources/images/environment/environment_water/environment_water_19.png" id="21_6fxqi"]
+[ext_resource type="Texture2D" uid="uid://csi6n8nspb87w" path="res://resources/images/environment/environment_water/environment_water_20.png" id="22_tju3e"]
+[ext_resource type="Texture2D" uid="uid://yikgxienpynk" path="res://resources/images/environment/environment_water/environment_water_21.png" id="23_m2f5y"]
+[ext_resource type="Texture2D" uid="uid://dr52cs3xylax5" path="res://resources/images/environment/environment_water/environment_water_22.png" id="24_npd8y"]
+[ext_resource type="Texture2D" uid="uid://k24r3y1hyeff" path="res://resources/images/environment/environment_water/environment_water_23.png" id="25_ji3bt"]
+[ext_resource type="Texture2D" uid="uid://ckablle441dp8" path="res://resources/images/environment/environment_water/environment_water_24.png" id="26_pyvu6"]
+[ext_resource type="Texture2D" uid="uid://cjwjanit5r5cx" path="res://resources/images/environment/environment_water/environment_water_25.png" id="27_ym2mo"]
+[ext_resource type="Texture2D" uid="uid://btuvhxl8ioc0r" path="res://resources/images/environment/environment_water/environment_water_26.png" id="28_cyj3g"]
+[ext_resource type="Texture2D" uid="uid://e2sjb05physm" path="res://resources/images/environment/environment_water/environment_water_27.png" id="29_hem8j"]
+[ext_resource type="Texture2D" uid="uid://chagf8a5na2do" path="res://resources/images/environment/environment_water/environment_water_28.png" id="30_aconl"]
+[ext_resource type="Texture2D" uid="uid://djx6gfe76gd4b" path="res://resources/images/environment/environment_water/environment_water_29.png" id="31_6pjc3"]
+[ext_resource type="Texture2D" uid="uid://c30kmxwnyub5l" path="res://resources/images/environment/environment_water/environment_water_30.png" id="32_4kdnr"]
+[ext_resource type="Texture2D" uid="uid://kfrhmj4f4bi2" path="res://resources/images/environment/environment_water/environment_water_31.png" id="33_5bmyj"]
+[ext_resource type="Texture2D" uid="uid://fdjce32qe0bc" path="res://resources/images/environment/environment_water/environment_water_32.png" id="34_yt2in"]
+[ext_resource type="Texture2D" uid="uid://bfdphabrvmbnf" path="res://resources/images/environment/environment_water/environment_water_33.png" id="35_c80a6"]
+[ext_resource type="Texture2D" uid="uid://f5kvdmskp6rq" path="res://resources/images/environment/environment_water/environment_water_34.png" id="36_4pl82"]
+[ext_resource type="Texture2D" uid="uid://c5rfqfy4yqtyj" path="res://resources/images/environment/environment_water/environment_water_35.png" id="37_0o1kb"]
+[ext_resource type="Texture2D" uid="uid://dm2lc757gipwg" path="res://resources/images/environment/environment_water/environment_water_36.png" id="38_1naqd"]
+[ext_resource type="Texture2D" uid="uid://cvinqprx06adn" path="res://resources/images/environment/environment_water/environment_water_37.png" id="39_k4vy7"]
+[ext_resource type="Texture2D" uid="uid://cv8hm82ekgr7j" path="res://resources/images/environment/environment_water/environment_water_38.png" id="40_enyes"]
+[ext_resource type="Texture2D" uid="uid://ola75gkwrysm" path="res://resources/images/environment/environment_water/environment_water_39.png" id="41_0t8ek"]
+[ext_resource type="Texture2D" uid="uid://pwiqk05jawug" path="res://resources/images/environment/environment_water/environment_water_40.png" id="42_c13d1"]
+[ext_resource type="Texture2D" uid="uid://dueboqgtxcg6p" path="res://resources/images/environment/environment_water/environment_water_41.png" id="43_xidll"]
+[ext_resource type="Texture2D" uid="uid://kpvvts211hjh" path="res://resources/images/environment/environment_water/environment_water_42.png" id="44_p360s"]
+[ext_resource type="Texture2D" uid="uid://ug8705383tue" path="res://resources/images/environment/environment_water/environment_water_43.png" id="45_oamkf"]
+[ext_resource type="Texture2D" uid="uid://bkhicwl7ys1mx" path="res://resources/images/environment/environment_water/environment_water_44.png" id="46_v6y6y"]
+[ext_resource type="Texture2D" uid="uid://2dbj0wwyrkin" path="res://resources/images/environment/environment_water/environment_water_45.png" id="47_o0mgj"]
+[ext_resource type="Texture2D" uid="uid://sn4wpbucii8i" path="res://resources/images/environment/environment_water/environment_water_46.png" id="48_o8gao"]
+[ext_resource type="Texture2D" uid="uid://qugbqgw0nink" path="res://resources/images/environment/environment_water/environment_water_47.png" id="49_mv0iy"]
+[ext_resource type="Texture2D" uid="uid://cvxw4djwmx630" path="res://resources/images/environment/environment_water/environment_water_48.png" id="50_55qoi"]
+[ext_resource type="Texture2D" uid="uid://cxlgavwf2y3c4" path="res://resources/images/environment/environment_water/environment_water_49.png" id="51_ngcin"]
+[ext_resource type="Texture2D" uid="uid://dif6ayoquthvu" path="res://resources/images/environment/environment_water/environment_water_50.png" id="52_qua8x"]
+[ext_resource type="Texture2D" uid="uid://cd36alkbs1iwd" path="res://resources/images/environment/environment_water/environment_water_51.png" id="53_u201i"]
+[ext_resource type="Texture2D" uid="uid://uc32ji04r7uy" path="res://resources/images/environment/environment_water/environment_water_52.png" id="54_dagar"]
+[ext_resource type="Texture2D" uid="uid://btcncyyl5akmu" path="res://resources/images/environment/environment_water/environment_water_53.png" id="55_w1exe"]
+[ext_resource type="Texture2D" uid="uid://didywbgsw4xtq" path="res://resources/images/environment/environment_water/environment_water_54.png" id="56_uujnr"]
+[ext_resource type="Texture2D" uid="uid://cdhtenav6fn42" path="res://resources/images/environment/environment_water/environment_water_55.png" id="57_s02d8"]
+[ext_resource type="Texture2D" uid="uid://da4vpraadgfdy" path="res://resources/images/environment/environment_water/environment_water_56.png" id="58_6m7i6"]
+[ext_resource type="Texture2D" uid="uid://dn0ape2k1jn7t" path="res://resources/images/environment/environment_water/environment_water_57.png" id="59_mylnc"]
+[ext_resource type="Texture2D" uid="uid://1jr8uiffumbp" path="res://resources/images/environment/environment_water/environment_water_58.png" id="60_dff2l"]
+[ext_resource type="Texture2D" uid="uid://ckxe7s3by514m" path="res://resources/images/environment/environment_water/environment_water_59.png" id="61_he1du"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_88mov"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_w6h02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5n67j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qlpdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tv2cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_om87a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7c1s5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mvj16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jueta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8vj80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_u14nq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ip8lp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_i55v2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ay25v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jl7si")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0fjt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hf5hr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_v25jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_65d1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_68pxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6fxqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_tju3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_m2f5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_npd8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ji3bt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_pyvu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ym2mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_cyj3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_hem8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_aconl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_6pjc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_4kdnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_5bmyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_yt2in")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_c80a6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_4pl82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_0o1kb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_1naqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_k4vy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_enyes")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_0t8ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_c13d1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_xidll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_p360s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_oamkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_v6y6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_o0mgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_o8gao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_mv0iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_55qoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ngcin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_qua8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_u201i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_dagar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_w1exe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_uujnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_s02d8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_6m7i6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_mylnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_dff2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_he1du")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="EndDayScene" type="Control" unique_id=1086290434]
 layout_mode = 3
@@ -10,6 +258,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_p3mll")
+
+[node name="WaterNode" type="Node2D" parent="." unique_id=129630448]
+
+[node name="Water1" type="AnimatedSprite2D" parent="WaterNode" unique_id=717424213]
+position = Vector2(255, 257)
+sprite_frames = SubResource("SpriteFrames_88mov")
+
+[node name="Water2" type="AnimatedSprite2D" parent="WaterNode" unique_id=958031711]
+position = Vector2(764, 256)
+sprite_frames = SubResource("SpriteFrames_88mov")
+
+[node name="Water3" type="AnimatedSprite2D" parent="WaterNode" unique_id=859483614]
+position = Vector2(1275, 254)
+sprite_frames = SubResource("SpriteFrames_88mov")
+
+[node name="Water4" type="AnimatedSprite2D" parent="WaterNode" unique_id=2102793605]
+position = Vector2(256, 768)
+sprite_frames = SubResource("SpriteFrames_88mov")
+
+[node name="Water5" type="AnimatedSprite2D" parent="WaterNode" unique_id=1688872491]
+position = Vector2(765, 767)
+sprite_frames = SubResource("SpriteFrames_88mov")
+
+[node name="Water6" type="AnimatedSprite2D" parent="WaterNode" unique_id=1404663907]
+position = Vector2(1276, 764)
+sprite_frames = SubResource("SpriteFrames_88mov")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=214743825]
 layout_mode = 1
@@ -66,6 +340,14 @@ text = "Player Money: "
 [node name="PlayerMoneyValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1805631794]
 layout_mode = 2
 text = "0"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1566883725]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="WarningLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=1400494066]
+layout_mode = 2
+text = "A new kind of fish will start to appear tomorrow..."
 
 [node name="NextDayButton" type="Button" parent="MarginContainer" unique_id=275091603]
 layout_mode = 2
